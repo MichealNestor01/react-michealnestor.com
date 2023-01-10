@@ -38,15 +38,6 @@ ul {
   height: 100%;
 }
 
-.header__desktop {
-  width: 80%;
-  padding: 0 10vw 0 10vw;
-}
-
-.header__mobile {
-  width: 100%;
-}
-
 .header {
   max-height: 5rem;
   min-height: 3rem;
@@ -65,6 +56,119 @@ ul {
           flex-direction: row;
   position: relative;
   z-index: 1;
+}
+
+.header__desktop {
+  width: 100%;
+  padding: 0 10vw 0 10vw;
+}
+
+.header__mobile {
+  width: 100%;
+}
+
+.header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .nav__desktop {
+  width: 40%;
+}
+
+.header .nav__mobile {
+  width: 25%;
+}
+
+.header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .nav a {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.9rem;
+  color: #72e2ae;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.header .nav .active {
+  text-decoration: underline;
+}
+
+.header .titleContainer {
+  position: relative;
+}
+
+.header .titleContainer__desktop {
+  width: 60%;
+  font-size: 3.5rem;
+}
+
+.header .titleContainer__mobile {
+  width: 75%;
+  font-size: 2rem;
+  margin-left: 0.2rem;
+}
+
+.header .titleContainer .title {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #fafafa;
+          text-decoration-color: #fafafa;
+  text-decoration-thickness: 7px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 700;
+  font-size: 4rem;
+  width: 100%;
+}
+
+.header .titleContainer .title__blue {
+  color: #72e2ae;
+}
+
+.header .titleContainer .title__white {
+  color: #72e2ae;
+}
+
+.header .titleContainer .underline {
+  display: none;
+  position: absolute;
+  width: 11.75vw;
+  height: 0.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fafafa;
+  -webkit-transform: translateY(-90%);
+          transform: translateY(-90%);
+  pointer-events: none;
+}
+
+.header .titleContainer .underline__extend {
+  width: 22.3vw;
 }
 
 .header__burger {
@@ -173,106 +277,6 @@ ul {
 
 .header__burger__nav .active {
   color: #fafafa;
-}
-
-.header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.header__nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.header__nav a {
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.9rem;
-  color: #72e2ae;
-  margin: 0rem 1rem 0rem 1rem;
-}
-
-.header__nav .active {
-  text-decoration: underline;
-}
-
-.header__nav__desktop {
-  width: 40%;
-}
-
-.header__nav__mobile {
-  width: 25%;
-}
-
-.header__titleContainer {
-  position: relative;
-}
-
-.header__titleContainer__desktop {
-  width: 60%;
-  font-size: 3.5rem;
-}
-
-.header__titleContainer__mobile {
-  width: 75%;
-  font-size: 2rem;
-  margin-left: 0.2rem;
-}
-
-.header__title {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  margin: 0;
-  font-weight: 700;
-  text-decoration: none;
-  width: 100%;
-}
-
-.header__title__underline {
-  position: absolute;
-  width: 11.75vw;
-  height: 0.5rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #fafafa;
-  -webkit-transform: translateY(-90%);
-          transform: translateY(-90%);
-  pointer-events: none;
-}
-
-.header__title__underline__extend {
-  width: 22.3vw;
-}
-
-.header__title__blue {
-  color: #72e2ae;
-}
-
-.header__title__white {
-  color: #72e2ae;
 }
 
 .loadingSpinner {
