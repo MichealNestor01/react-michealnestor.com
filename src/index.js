@@ -16,7 +16,7 @@ import store from "./store/index";
 // browser router enables react router
 import { BrowserRouter } from "react-router-dom";
 
-const root = createRoot.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <BrowserRouter>

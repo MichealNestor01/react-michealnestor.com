@@ -9,14 +9,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "./store";
 
 //pages
-//import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 //import AboutPage from "./pages/AboutPage";
 //import PortfolioPage from "./pages/PortfolioPage";
 //import ProjectDetailPage from "./pages/ProjectDetailPage";
 //import ContactPage from "./pages/ContactPage";
 
 //components
-import Header from "./components/ui/Header";
+import Header from "./components/Header";
 import Popup from "./components/ui/Popup";
 
 function App() {
@@ -26,33 +26,33 @@ function App() {
   const { showPopup, popupMessage, popupTitle } = useSelector((state) => state.ui);
 
   //===page responsiveness===//
+
   useEffect(() => {
+    const updateDimensions = () => {
+      const width = window.innerWidth;
+      dispatch(uiActions.setScreenWidth(width));
+    };
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
     return () => {
       window.removeEventListener("resize", updateDimensions);
     };
-  }, []);
-
-  const updateDimensions = () => {
-    const width = window.innerWidth;
-    dispatch(uiActions.setScreenWidth(width));
-  };
+  }, [dispatch]);
 
   //===Setup page animations==//
   // inital state of a page is transparent and 20% below where it should be
-  const initalPageState = { opacity: 0, y: "20vh" };
+  const initalPageState = { opacity: 0, x: "100vw" };
   // the enter state (or active state) is opaque and where it should be
-  const enterPageState = { opacity: 1, y: "0vh" };
+  const enterPageState = { opacity: 1, x: "0vw" };
   // the leave page state moves the page up and makes it once again transparent
-  const leavePageState = { opacity: 0, y: "-20vh" };
+  const leavePageState = { opacity: 0, x: "-100vw" };
   // page transitons will last 0.6 seconds
   const pageTransition = { duration: 0.6 };
 
   //===react router setup===//
   //page list for react router
   const pagesArray = [
-    //{ path: "", key: "landing", component: <LandingPage />, exact: true },
+    { path: "", key: "landing", component: <LandingPage />, exact: true },
     //{ path: "about", key: "about", component: <AboutPage />, exact: true },
     //{ path: "portfolio", key: "portfolio", component: <PortfolioPage />, exact: true },
     //{ path: "contact", key: "contact", component: <ContactPage />, exact: true },
