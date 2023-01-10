@@ -117,6 +117,8 @@ ul {
 
 .header .nav .active {
   text-decoration: underline;
+  -webkit-text-decoration-color: #fafafa;
+          text-decoration-color: #fafafa;
 }
 
 .header .titleContainer {
