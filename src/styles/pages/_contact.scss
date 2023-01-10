@@ -7,7 +7,7 @@
   }
   &__errorMessage {
     width: 80%;
-    color: $colorAccentB;
+    color: $colorSecondary;
     margin-top: 1rem;
     font-size: 2rem;
     text-align: center;
@@ -21,7 +21,7 @@
     width: 80%;
     @include flex(flex-start, center, column);
     &__inputError {
-      color: $colorAccentB;
+      color: $colorSecondary;
       font-size: 1.5rem;
       font-weight: 700;
       margin-top: 0.2rem;
@@ -58,7 +58,7 @@
       color: $colorPrimaryA;
 
       &__invalid {
-        background-color: $colorAccentB;
+        background-color: $colorSecondary;
       }
       &__desktop {
         font-size: 2rem;
@@ -74,7 +74,7 @@
     }
     &__button {
       cursor: pointer;
-      background-color: $colorAccentB;
+      background-color: $colorSecondary;
       border: none;
       border-radius: 2rem;
       padding: 0.5rem 1rem;

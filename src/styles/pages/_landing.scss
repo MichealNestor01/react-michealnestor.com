@@ -1,110 +1,106 @@
 // class for my landing page
 .landingPage {
-  &__container {
-    width: 100%;
-    height: 90vh;
-    @include flex(center, flex-start, row);
-  }
+  // container styling
+  width: 100%;
+  height: 90vh;
+  @include flex(center, flex-start, row);
 
-  &__content {
+  // children
+  .content {
+    // content section styling
     &__desktop {
       @include flex(flex-start, flex-start, column);
-      width: 55vw;
+      width: 55%;
     }
     &__mobile {
       @include flex(center, center, column);
       width: 100%;
     }
-  }
 
-  &__title {
-    font-weight: 700;
-    color: $colorSecondary;
-    &__desktop {
-      font-size: 6rem;
-      margin-top: 8rem;
+    // children
+    .title {
+      font-weight: 700;
+      color: $colorSecondary;
+      &__desktop {
+        font-size: 6rem;
+        margin-top: 100px;
+      }
+      &__mobile {
+        font-size: 3rem;
+      }
     }
-    &__mobile {
-      font-size: 3rem;
+    .paragraph {
+      font-weight: 700;
+      color: $colorPrimaryB;
+      &__desktop {
+        text-align: justify;
+        width: 90%;
+        font-size: 2.5rem;
+        margin-top: 10px;
+      }
+      &__mobile {
+        width: 100%;
+        font-size: 1.75rem;
+        width: 95%;
+      }
     }
-  }
-
-  &__paragraph {
-    font-weight: 700;
-    color: $colorPrimaryB;
-    &__desktop {
-      text-align: justify;
-      width: 90%;
-      font-size: 2.5rem;
-      margin-top: 1rem;
-    }
-    &__mobile {
-      width: 100%;
-      font-size: 1.75rem;
-      width: 95%;
-    }
-  }
-
-  &__button {
-    color: $colorPrimaryA;
-    background-color: $colorAccentB;
-    @include flex(center, center, row);
-    font-size: 1.9rem;
-    cursor: pointer;
-    padding: 0.8rem 3rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 10rem;
-    font-weight: 700;
-    width: 15rem;
-    height: 2.5rem;
-    p {
-      user-select: none;
-    }
-  }
-
-  &__socials {
-    margin-top: 1rem;
-    @include flex(flex-start, center, row);
-    width: 18rem;
-    height: 4rem;
-    a {
-      height: 100%;
-      width: 6rem;
-      @include flex(flex-start, flex-start, row);
-      img {
-        filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
-        //filter: invert(63%) sepia(17%) saturate(345%) hue-rotate(179deg) brightness(92%) contrast(93%);
-        //filter: invert(18%) sepia(97%) saturate(5411%) hue-rotate(343deg) brightness(82%) contrast(108%);
+    .socials {
+      margin-top: 15px;
+      @include flex(flex-start, center, row);
+      width: 180px;
+      height: 70px;
+      a {
+        margin-right: 30px;
         height: 100%;
+        width: 80px;
+        @include flex(flex-start, flex-start, row);
+        img {
+          filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
+          height: 100%;
+        }
+      }
+    }
+    .button {
+      color: $colorPrimaryA;
+      background-color: $colorSecondary;
+      @include flex(center, center, row);
+      font-size: 1.9rem;
+      cursor: pointer;
+      padding: 30px 40px;
+      margin-top: 15px;
+      border-radius: 100px;
+      font-weight: 700;
+      width: 300px;
+      height: 40px;
+      p {
+        user-select: none;
+      }
+    }
+    .imageContainer {
+      @include flex(center, center, row);
+      img {
+        width: 20rem;
       }
     }
   }
-
-  &__image {
+  .imageSection {
+    // image section styling
     width: 25vw;
     height: 90%;
     @include flex(center, flex-start, row);
     position: relative;
-
     &__mobile {
       display: none;
     }
 
-    &__container {
+    //children
+    .container {
       margin-top: 8rem;
-      //background-color: $colorPrimaryB;
       width: 18rem;
       height: 30rem;
       @include flex(center, center, row);
       img {
         width: 35rem;
-      }
-    }
-    &__mobileContainer {
-      @include flex(center, center, row);
-      img {
-        width: 20rem;
       }
     }
   }

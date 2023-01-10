@@ -5,7 +5,7 @@
   color: $colorPrimaryB;
   &__button {
     color: $colorPrimaryA;
-    background-color: $colorAccentB;
+    background-color: $colorSecondary;
     @include flex(center, center, row);
     font-size: 3rem;
     cursor: pointer;
