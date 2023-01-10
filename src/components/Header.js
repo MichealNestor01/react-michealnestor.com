@@ -5,15 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
 
 const Header = () => {
-  // extendUnderline refers to the state of the underline div under the title
-  // on hover the underline extends to underline the full title
-  const [extendUnderline, setExtendUnderline] = useState(false);
   const screenWidth = useSelector((state) => state.ui.screenWidth);
   const [openLinks, setOpenLinks] = useState(false);
-  // determine whether the underline should be extended or not
-  const underlineClasses = extendUnderline
-    ? "header__title__underline header__title__underline__extend"
-    : "header__title__underline";
 
   // setup the navigation links
   const linkInfo = [
@@ -67,18 +60,16 @@ const Header = () => {
   const mountedState = { opacity: 1, height: "10vh" };
 
   let linkContent = burger;
-  let headerContainerClasses = "header__titleContainer header__titleContainer__mobile";
-  let navClasses = "header__nav header__nav__mobile";
+  let headerContainerClasses = "titleContainer titleContainer__mobile";
+  let navClasses = "nav nav__mobile";
   let headerClasses = "header header__mobile";
   if (screenWidth > 1200) {
     linkContent = <ul>{navLinks}</ul>;
     headerClasses = "header header__desktop";
-    headerContainerClasses = "header__titleContainer header__titleContainer__desktop";
-    navClasses = "header__nav header__nav__desktop";
+    headerContainerClasses = "titleContainer titleContainer__desktop";
+    navClasses = "nav nav__desktop";
   }
-  const titleClasses = openLinks
-    ? "header__title header__title__blue"
-    : "header__title header__title__white";
+  const titleClasses = openLinks ? "title title__blue" : "title title__white";
 
   // return the component //
   return (
@@ -92,16 +83,9 @@ const Header = () => {
         className={headerClasses}
       >
         <div className={headerContainerClasses}>
-          <Link
-            className={titleClasses}
-            to="/"
-            onClick={() => setOpenLinks(false)}
-            onMouseEnter={() => setExtendUnderline(true)}
-            onMouseLeave={() => setExtendUnderline(false)}
-          >
+          <Link className={titleClasses} to="/" onClick={() => setOpenLinks(false)}>
             Micheal Nestor
           </Link>
-          {screenWidth === 1920 ? <div className={underlineClasses} /> : ""}
         </div>
         <nav className={navClasses}>{linkContent}</nav>
         <AnimatePresence>{openLinks ? burgerNav : ""}</AnimatePresence>

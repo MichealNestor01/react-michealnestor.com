@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import image from "../assets/landingPageImage.png";
-import data from "../siteData/landingPage.json";
 import useImage from "../hooks/useImage";
+
+// landing page data:
+import data from "../siteData/landingPage.json";
 
 // components
 import Socials from "../components/Socials";
