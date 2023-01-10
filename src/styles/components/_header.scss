@@ -1,0 +1,144 @@
+// my header component
+.header__desktop {
+  width: 80%;
+  padding: 0 10vw 0 10vw;
+}
+
+.header__mobile {
+  width: 100%;
+}
+
+.header {
+  ///height: 10vh;
+  max-height: 5rem;
+  min-height: 3rem;
+  @include flex(center, center, row);
+  position: relative;
+  z-index: 1;
+
+  &__burger {
+    position: relative;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    height: 1.4rem;
+    @include flex(space-between, center, column);
+    &__bar {
+      transform-origin: center;
+      transition: all 0.5s ease-in-out;
+    }
+    &__bar__closed {
+      width: 1.7rem;
+      height: 0.3rem;
+      background-color: $colorSecondary;
+    }
+    &__bar__open:nth-last-of-type(1) {
+      width: 1.7rem;
+      height: 0.3rem;
+      transform: translateY(-0.55rem) rotate(45deg);
+      background-color: $colorSecondary;
+    }
+    &__bar__open:nth-last-of-type(2) {
+      width: 1.7rem;
+      height: 0.3rem;
+      background-color: $colorPrimaryA;
+    }
+    &__bar__open:nth-last-of-type(3) {
+      width: 1.7rem;
+      height: 0.3rem;
+      transform: translateY(0.55rem) rotate(-45deg);
+      background-color: $colorSecondary;
+    }
+    &__nav {
+      position: absolute;
+      width: 100%;
+      height: 200vh;
+      background-color: $colorPrimaryA;
+      z-index: -1;
+      @include flex(center, center, row);
+      padding-top: 20rem;
+      ul {
+        padding-left: 0px;
+        height: 15rem;
+        @include flex(space-evenly, center, column);
+      }
+      a {
+        transition: all 0.5s ease-in-out;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 2rem;
+        color: $colorSecondary;
+      }
+      .active {
+        color: $colorPrimaryB;
+      }
+    }
+  }
+
+  &__nav {
+    @include flex(flex-end, center, row);
+
+    ul {
+      @include flex(flex-end, center, row);
+    }
+
+    a {
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.9rem;
+      color: $colorAccentB;
+      margin: 0rem 1rem 0rem 1rem;
+    }
+
+    .active {
+      text-decoration: underline;
+    }
+
+    &__desktop {
+      width: 40%;
+    }
+    &__mobile {
+      width: 25%;
+    }
+  }
+
+  &__titleContainer {
+    position: relative;
+    &__desktop {
+      width: 60%;
+      font-size: 3.5rem;
+    }
+    &__mobile {
+      width: 75%;
+      font-size: 2rem;
+      margin-left: 0.2rem;
+    }
+  }
+
+  &__title {
+    transition: all 0.5s ease;
+    margin: 0;
+    font-weight: 700;
+    text-decoration: none;
+    width: 100%;
+
+    &__underline {
+      position: absolute;
+      width: 11.75vw;
+      height: 0.5rem;
+      transition: all 0.3s ease-in-out;
+      background-color: $colorPrimaryB;
+      transform: translateY(-90%);
+      pointer-events: none;
+
+      &__extend {
+        width: 22.3vw;
+      }
+    }
+    &__blue {
+      color: $colorSecondary;
+    }
+    &__white {
+      color: $colorSecondary;
+    }
+  }
+}

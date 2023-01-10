@@ -1,0 +1,23 @@
+.reload_content {
+  margin-top: 5rem;
+  @include flex(center, center, column);
+  font-size: 1.5rem;
+  color: $colorPrimaryB;
+  &__button {
+    color: $colorPrimaryA;
+    background-color: $colorAccentB;
+    @include flex(center, center, row);
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    border-radius: 10rem;
+    border: none;
+    font-weight: 700;
+    width: 15rem;
+    height: 6rem;
+    p {
+      user-select: none;
+    }
+  }
+}

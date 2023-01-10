@@ -1,0 +1,119 @@
+.projectDetail {
+  &__container {
+    width: 100%;
+    @include flex(flex-start, center, column);
+    &__desktop {
+      overflow-y: hidden;
+    }
+    &__mobile {
+      overflow-y: scroll;
+      height: 90vh;
+    }
+  }
+  &__headerWrapper {
+    height: 20%;
+    min-height: 12rem;
+    &__desktop {
+      width: 80%;
+      @include flex(center, center, row);
+    }
+    &__mobile {
+      width: 98%;
+      @include flex(center, center, column);
+    }
+  }
+
+  &__mainWrapper {
+    //background-color: magenta;
+    &__desktop {
+      width: 80%;
+      height: 80%;
+      @include flex(space-between, center, row);
+    }
+    &__mobile {
+      width: 98%;
+      @include flex(center, center, column);
+    }
+  }
+
+  &__detailWrapper {
+    @include flex(center, center, column);
+    color: $colorPrimaryB;
+    font-size: 1.3rem;
+    &__desktop {
+      width: 40%;
+    }
+    &__mobile {
+      width: 100%;
+    }
+  }
+  &__dateCompleted,
+  &__projectType {
+    width: 100%;
+    &__desktop {
+      text-align: right;
+    }
+    &__mobile {
+      text-align: center;
+    }
+  }
+
+  &__descriptionWrapper {
+    @include flex(flex-start, center, column);
+    &__desktop {
+      width: 39%;
+      height: 100%;
+    }
+    &__mobile {
+      width: 100%;
+    }
+  }
+  &__galleryWrapper {
+    //background-color: coral;
+    &__desktop {
+      width: 59%;
+    }
+    &__mobile {
+      width: 98%;
+    }
+  }
+  &__descriptionButtonsWrapper {
+    margin-top: 1rem;
+    width: 100%;
+    @include flex(space-evenly, center, row);
+  }
+  &__title {
+    width: 60%;
+    color: $colorSecondary;
+    &__desktop {
+      font-size: 4rem;
+    }
+    &__mobile {
+      @include flex(center, center, row);
+      width: 100%;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  &__description {
+    color: $colorPrimaryB;
+    text-align: justify;
+    &__desktop {
+      font-size: 1.8rem;
+    }
+    &__mobile {
+      font-size: 1.5rem;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    background-color: $colorAccentB;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.9rem;
+    text-decoration: none;
+    color: $colorPrimaryA;
+    font-weight: 700;
+  }
+}

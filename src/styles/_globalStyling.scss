@@ -1,0 +1,44 @@
+// get montserrat font, the website's font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+// remove margin and padding from everything
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// standard body styling
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: $colorPrimaryA;
+}
+
+// remove list styling from ul's
+ul {
+  list-style: none;
+}
+
+//======MIGHT BIN THIS SHIT======//
+// wrappers will be on every page
+.allowScroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.noScroll {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.defaultPageWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+// default height and width
+#root {
+  width: 100%;
+  height: 100%;
+}

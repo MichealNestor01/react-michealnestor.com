@@ -1,0 +1,43 @@
+//===variables===//
+//colour pallette
+$colorPrimaryA: #111b30;
+$colorPrimaryB: #fafafa;
+$colorSecondary: #72e2ae;
+$colorAccentB: #72e2ae;
+
+//===mixins===//
+// flex box mixin
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// simple mixin to put something in the center of the page
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//===import files===//
+@import "globalStyling";
+
+//components
+// components:
+@import "./components/header";
+@import "./components/loadingSpinner";
+@import "./components/reloadContent";
+@import "./components/popup";
+@import "./components/projectMini";
+@import "./components/gallery";
+@import "./components/selectBox";
+
+//pages:
+@import "./pages/about";
+@import "./pages/landing";
+@import "./pages/portfolioPage";
+@import "./pages/projectDetail";
+@import "./pages/contact";
