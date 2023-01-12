@@ -817,58 +817,49 @@ ul {
           transform: translateX(0.19rem);
 }
 
-.about__container {
-  height: 92vh;
+.aboutPage {
   color: #fafafa;
   width: 100%;
-}
-
-.about__container h1 {
-  color: #72e2ae;
-}
-
-.about__container__desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-.about__container__desktop h1 {
+.aboutPage__desktop h1 {
   font-size: 3rem;
 }
 
-.about__container__mobile h1 {
+.aboutPage__mobile h1 {
   font-size: 2rem;
 }
 
-.about__contentWrapper__desktop {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.aboutPage h1 {
+  color: #72e2ae;
 }
 
-.about__contentWrapper__mobile {
+.aboutPage .content__desktop {
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2.5%;
+}
+
+.aboutPage .content__mobile {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -885,15 +876,7 @@ ul {
           flex-direction: column;
 }
 
-.about__biography__desktop {
-  width: 48%;
-}
-
-.about__biography__mobile {
-  width: 98%;
-}
-
-.about__title__desktop {
+.aboutPage .content .box1 .title__desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,7 +892,7 @@ ul {
           flex-direction: row;
 }
 
-.about__title__mobile {
+.aboutPage .content .box1 .title__mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -925,7 +908,7 @@ ul {
           flex-direction: column;
 }
 
-.about__socials {
+.aboutPage .content .box1 .title .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -941,7 +924,7 @@ ul {
           flex-direction: row;
 }
 
-.about__socials a {
+.aboutPage .content .box1 .title .socials a {
   height: 100%;
   width: 4rem;
   display: -webkit-box;
@@ -959,27 +942,35 @@ ul {
           flex-direction: row;
 }
 
-.about__socials a img {
+.aboutPage .content .box1 .title .socials a img {
   -webkit-filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
           filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
   height: 100%;
 }
 
-.about__socials__desktop {
+.aboutPage .content .box1 .title .socials__desktop {
   margin-left: 1rem;
   width: 12rem;
   height: 3rem;
 }
 
-.about__socials__mobile {
+.aboutPage .content .box1 .title .socials__mobile {
   width: 10rem;
   height: 3rem;
 }
 
-.about__skillsWrapper {
+.aboutPage .content .box1 .description__desktop {
+  text-align: justify;
+  font-size: 1.75rem;
+}
+
+.aboutPage .content .box1 .description__mobile {
+  font-size: 1.5rem;
+}
+
+.aboutPage .content .box2 .skillsContainer {
   list-style-type: square;
   font-size: 1.75rem;
-  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -997,46 +988,16 @@ ul {
       flex-wrap: wrap;
 }
 
-.about__skillsWrapper li {
+.aboutPage .content .box2 .skillsContainer li {
+  margin-left: 30px;
   width: 20rem;
 }
 
-.about__description {
-  margin-bottom: 1rem;
+.aboutPage .content .box3 .selectBox {
+  margin-bottom: 20px;
 }
 
-.about__description__desktop {
-  text-align: justify;
-  font-size: 1.75rem;
-}
-
-.about__description__mobile {
-  font-size: 1.5rem;
-}
-
-.about__results__desktop {
-  width: 48%;
-}
-
-.about__results__desktop p {
-  text-align: justify;
-  font-size: 1.8rem;
-}
-
-.about__results__mobile {
-  width: 100%;
-}
-
-.about__results__mobile p {
-  margin-left: 0.2rem;
-  font-size: 1.5rem;
-}
-
-.about__selectBox {
-  width: 100%;
-}
-
-.about__selectBox__desktop {
+.aboutPage .content .box3 .selectBox__desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1052,11 +1013,11 @@ ul {
           flex-direction: row;
 }
 
-.about__selectBox__desktop p {
+.aboutPage .content .box3 .selectBox__desktop p {
   font-size: 2rem;
 }
 
-.about__selectBox__mobile {
+.aboutPage .content .box3 .selectBox__mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1072,34 +1033,33 @@ ul {
           flex-direction: row;
 }
 
-.about__selectBox__mobile p {
+.aboutPage .content .box3 .selectBox__mobile p {
   font-size: 1.4rem;
   margin-right: 1rem;
 }
 
-.about__selectBoxTitle {
+.aboutPage .content .box3 .selectBox .selectBoxTitle {
   color: #fafafa;
 }
 
-.about__examWrapper {
-  width: 100%;
+.aboutPage .content .box3 .examWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 1rem 0rem;
+  min-height: 400px;
 }
 
-.about__examTable {
+.aboutPage .content .box3 .examWrapper .examTable {
   color: #fafafa;
   font-size: 1.5rem;
   width: 40rem;
@@ -1107,20 +1067,174 @@ ul {
   text-align: center;
 }
 
-.about__examTitle {
+.aboutPage .content .box3 .examWrapper .examTable .examTitle {
   border-bottom: solid 0.25rem #fafafa;
   color: #72e2ae;
 }
 
-.about__achievementTitle {
+.aboutPage .content .box4 .achievementTitle {
   font-weight: 300;
   font-size: 2rem;
 }
 
-.about__achievementDesc {
-  margin-bottom: 1rem;
+.aboutPage .content .box4 .achievementDesc {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
+/*
+.about {
+  &__container {
+    height: 92vh;
+    color: $colorPrimaryB;
+    width: 100%;
+    //background-color: royalblue;
+    //color: $colorSecondary;
+    h1 {
+      color: $colorSecondary;
+    }
+
+    &__desktop {
+      @include flex(center, flex-start, row);
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    &__mobile {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__contentWrapper {
+    &__desktop {
+      width: 80%;
+      @include flex(space-between, flex-start, row);
+    }
+    &__mobile {
+      width: 100%;
+      @include flex(center, center, column);
+    }
+  }
+  &__biography {
+    &__desktop {
+      width: 48%;
+    }
+    &__mobile {
+      width: 98%;
+    }
+  }
+  &__title {
+    &__desktop {
+      @include flex(flex-start, center, row);
+    }
+    &__mobile {
+      @include flex(center, flex-start, column);
+    }
+  }
+  &__socials {
+    @include flex(flex-start, center, row);
+    a {
+      height: 100%;
+      width: 4rem;
+      @include flex(flex-start, flex-start, row);
+      img {
+        filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
+        height: 100%;
+      }
+    }
+    &__desktop {
+      margin-left: 1rem;
+      width: 12rem;
+      height: 3rem;
+    }
+    &__mobile {
+      width: 10rem;
+      height: 3rem;
+    }
+  }
+  &__skillsWrapper {
+    list-style-type: square;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    @include flex(space-between, center, row);
+    flex-wrap: wrap;
+    li {
+      width: 20rem;
+    }
+  }
+
+  &__description {
+    margin-bottom: 1rem;
+    &__desktop {
+      text-align: justify;
+      font-size: 1.75rem;
+    }
+    &__mobile {
+      font-size: 1.5rem;
+    }
+  }
+  &__results {
+    &__desktop {
+      width: 48%;
+      p {
+        text-align: justify;
+        font-size: 1.8rem;
+      }
+    }
+    &__mobile {
+      width: 100%;
+      p {
+        margin-left: 0.2rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__selectBox {
+    width: 100%;
+    &__desktop {
+      @include flex(space-between, center, row);
+      p {
+        font-size: 2rem;
+      }
+    }
+    &__mobile {
+      p {
+        font-size: 1.4rem;
+        margin-right: 1rem;
+      }
+      @include flex(center, center, row);
+    }
+  }
+  &__selectBoxTitle {
+    color: $colorPrimaryB;
+  }
+  &__examWrapper {
+    width: 100%;
+    @include flex(center, center, row);
+    margin: 1rem 0rem;
+  }
+  &__examTable {
+    color: $colorPrimaryB;
+    font-size: 1.5rem;
+    width: 40rem;
+    border: solid 0.25rem $colorPrimaryB;
+    text-align: center;
+  }
+  &__examTitle {
+    border-bottom: solid 0.25rem $colorPrimaryB;
+    color: $colorSecondary;
+  }
+  &__achievementTitle {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  &__achievementDesc {
+    margin-bottom: 1rem;
+  }
+}
+
+*/
 .landingPage {
   width: 100%;
   height: 90vh;

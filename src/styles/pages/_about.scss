@@ -1,3 +1,153 @@
+.aboutPage {
+  // styling
+  color: $colorPrimaryB;
+  width: 100%;
+  @include flex(center, center, row);
+  &__desktop {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  &__mobile {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  // children
+  h1 {
+    color: $colorSecondary;
+  }
+  .content {
+    //Styling
+    &__desktop {
+      width: 80%;
+      display: grid;
+      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5%;
+    }
+    &__mobile {
+      width: 100%;
+      @include flex(center, center, column);
+    }
+
+    // children
+    .box1 {
+      .title {
+        // styling
+        &__desktop {
+          @include flex(flex-start, center, row);
+        }
+        &__mobile {
+          @include flex(center, flex-start, column);
+        }
+
+        // children
+        .socials {
+          @include flex(flex-start, center, row);
+          a {
+            height: 100%;
+            width: 4rem;
+            @include flex(flex-start, flex-start, row);
+            img {
+              filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
+              height: 100%;
+            }
+          }
+          &__desktop {
+            margin-left: 1rem;
+            width: 12rem;
+            height: 3rem;
+          }
+          &__mobile {
+            width: 10rem;
+            height: 3rem;
+          }
+        }
+      }
+      .description {
+        &__desktop {
+          text-align: justify;
+          font-size: 1.75rem;
+        }
+        &__mobile {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .box2 {
+      // children
+      .skillsContainer {
+        list-style-type: square;
+        font-size: 1.75rem;
+        @include flex(space-between, center, row);
+        flex-wrap: wrap;
+        li {
+          margin-left: 30px;
+          width: 20rem;
+        }
+      }
+    }
+    .box3 {
+      .selectBox {
+        // styling
+        margin-bottom: 20px;
+        &__desktop {
+          @include flex(space-between, center, row);
+          p {
+            font-size: 2rem;
+          }
+        }
+        &__mobile {
+          p {
+            font-size: 1.4rem;
+            margin-right: 1rem;
+          }
+          @include flex(center, center, row);
+        }
+
+        // children
+        .selectBoxTitle {
+          color: $colorPrimaryB;
+        }
+      }
+      .examWrapper {
+        //styling
+        @include flex(center, flex-start, row);
+        min-height: 400px;
+
+        //chilren
+        .examTable {
+          // styling
+          color: $colorPrimaryB;
+          font-size: 1.5rem;
+          width: 40rem;
+          border: solid 0.25rem $colorPrimaryB;
+          text-align: center;
+
+          // children
+          .examTitle {
+            border-bottom: solid 0.25rem $colorPrimaryB;
+            color: $colorSecondary;
+          }
+        }
+      }
+    }
+    .box4 {
+      .achievementTitle {
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      .achievementDesc {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/*
 .about {
   &__container {
     height: 92vh;
@@ -148,3 +298,5 @@
     margin-bottom: 1rem;
   }
 }
+
+*/
