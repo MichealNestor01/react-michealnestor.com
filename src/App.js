@@ -10,7 +10,7 @@ import { uiActions } from "./store";
 
 //pages
 import LandingPage from "./pages/LandingPage";
-//import AboutPage from "./pages/AboutPage";
+import AboutPage from "./pages/AboutPage";
 //import PortfolioPage from "./pages/PortfolioPage";
 //import ProjectDetailPage from "./pages/ProjectDetailPage";
 //import ContactPage from "./pages/ContactPage";
@@ -41,19 +41,17 @@ function App() {
 
   //===Setup page animations==//
   // inital state of a page is transparent and 20% below where it should be
-  const initalPageState = { opacity: 0, x: "100vw" };
+  const initalPageState = { x: "100%", opacity: 0 };
   // the enter state (or active state) is opaque and where it should be
-  const enterPageState = { opacity: 1, x: "0vw" };
+  const enterPageState = { x: "0%", opacity: 1 };
   // the leave page state moves the page up and makes it once again transparent
-  const leavePageState = { opacity: 0, x: "-100vw" };
-  // page transitons will last 0.6 seconds
-  const pageTransition = { duration: 0.6 };
+  const leavePageState = { x: "-100%", opacity: 0 };
 
   //===react router setup===//
   //page list for react router
   const pagesArray = [
     { path: "", key: "landing", component: <LandingPage />, exact: true },
-    //{ path: "about", key: "about", component: <AboutPage />, exact: true },
+    { path: "about", key: "about", component: <AboutPage />, exact: true },
     //{ path: "portfolio", key: "portfolio", component: <PortfolioPage />, exact: true },
     //{ path: "contact", key: "contact", component: <ContactPage />, exact: true },
     //{ path: "portfolio/:slug", key: "projectDetail", component: <ProjectDetailPage />, exact: true },
@@ -71,7 +69,7 @@ function App() {
             initial={initalPageState}
             animate={enterPageState}
             exit={leavePageState}
-            transition={pageTransition}
+            transition={{ transition: 0 }}
           >
             {page.component}
           </motion.div>
@@ -91,7 +89,7 @@ function App() {
       {/* Show the header */}
       <Header />
       {/* Animate the current page entering */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence initial={false} mode="wait">
         <Routes location={location} key={location.pathname}>
           {routes}
         </Routes>
