@@ -1,0 +1,54 @@
+{
+  "skillsData": [
+    { "skill": "Python" },
+    { "skill": "C++" },
+    { "skill": "C" },
+    { "skill": "Java" },
+    { "skill": "JavaScript" },
+    { "skill": "Linux" },
+    { "skill": "React.js" },
+    { "skill": "Docker" },
+    { "skill": "Git" },
+    { "skill": "CSS/SASS" },
+    { "skill": "Django" },
+    { "skill": "React-Redux" },
+    { "skill": "Qt5" },
+    { "skill": "Machine Learning" }
+  ],
+  "examData": [
+    { "exam_type": "GCSE", "title": "Mathematics", "grade": "9" },
+    { "exam_type": "GCSE", "title": "Chemistry", "grade": "8" },
+    { "exam_type": "GCSE", "title": "English Literature", "grade": "8" },
+    { "exam_type": "GCSE", "title": "Computer Science", "grade": "8" },
+    { "exam_type": "GCSE", "title": "Geography", "grade": "8" },
+    { "exam_type": "GCSE", "title": "Physics", "grade": "8" },
+    { "exam_type": "GCSE", "title": "Religious Studies", "grade": "7" },
+    { "exam_type": "GCSE", "title": "Biology", "grade": "7" },
+    { "exam_type": "GCSE", "title": "English Literature", "grade": "7" },
+    { "exam_type": "A-Level", "title": "Mathematics", "grade": "A*" },
+    { "exam_type": "A-Level", "title": "Computer Science", "grade": "A*" },
+    { "exam_type": "A-Level", "title": "Further Mathematics", "grade": "A*" },
+    { "exam_type": "BSc Year One", "title": "Object Oriented Programming", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Procedural Programming", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Programming Project", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Intro to Discrete Mathematics", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Fundamental Math Concepts", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Computer Processors", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Computer Architecture", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Professional Computing", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Beginners Russian 1", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Beginners Russian 2", "grade": "1:1" },
+    { "exam_type": "BSc Year One", "title": "Databases", "grade": "2:1" }
+  ],
+  "achievements": [
+    {
+      "title": "The Matrix Challenge",
+      "description": "This was a cyber security competition hosted by nationwide police forces. I learned a lot from the CTF style final. I came 14th out of 65,258 contestants."
+    },
+    {
+      "title": "The Bebras Challenge",
+      "description": "This was a set of computing problems to complete in an hour, I achieved a distinction certificate."
+    }
+  ],
+  "paragraph": "I am a highly competent software developer and a quick learner. I approach problems with an agile, flexible mindset, using my skills to achieve elegant, efficient solutions. My excellent time management and organisational skills ensure deadlines are always met, I can also employ these same skills to work collaboratively and in leadership roles."
+}
