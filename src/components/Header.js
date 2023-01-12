@@ -56,9 +56,6 @@ const Header = () => {
   );
 
   //===animation setup===//
-  const unmountedState = { opacity: 0, height: "0vh" };
-  const mountedState = { opacity: 1, height: "10vh" };
-
   let linkContent = burger;
   let headerContainerClasses = "titleContainer titleContainer__mobile";
   let navClasses = "nav nav__mobile";
@@ -73,24 +70,15 @@ const Header = () => {
 
   // return the component //
   return (
-    <AnimatePresence>
-      <motion.section
-        key="header"
-        initial={unmountedState}
-        animate={mountedState}
-        exit={unmountedState}
-        transition={{ duration: 0.6 }}
-        className={headerClasses}
-      >
-        <div className={headerContainerClasses}>
-          <Link className={titleClasses} to="/" onClick={() => setOpenLinks(false)}>
-            Micheal Nestor
-          </Link>
-        </div>
-        <nav className={navClasses}>{linkContent}</nav>
-        <AnimatePresence>{openLinks ? burgerNav : ""}</AnimatePresence>
-      </motion.section>
-    </AnimatePresence>
+    <section key="header" className={headerClasses}>
+      <div className={headerContainerClasses}>
+        <Link className={titleClasses} to="/" onClick={() => setOpenLinks(false)}>
+          Micheal Nestor
+        </Link>
+      </div>
+      <nav className={navClasses}>{linkContent}</nav>
+      <AnimatePresence>{openLinks ? burgerNav : ""}</AnimatePresence>
+    </section>
   );
 };
 
