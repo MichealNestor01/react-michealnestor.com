@@ -11,7 +11,7 @@ import { uiActions } from "./store";
 //pages
 import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
-//import PortfolioPage from "./pages/PortfolioPage";
+import PortfolioPage from "./pages/PortfolioPage";
 //import ProjectDetailPage from "./pages/ProjectDetailPage";
 //import ContactPage from "./pages/ContactPage";
 
@@ -52,7 +52,7 @@ function App() {
   const pagesArray = [
     { path: "", key: "landing", component: <LandingPage />, exact: true },
     { path: "about", key: "about", component: <AboutPage />, exact: true },
-    //{ path: "portfolio", key: "portfolio", component: <PortfolioPage />, exact: true },
+    { path: "portfolio", key: "portfolio", component: <PortfolioPage />, exact: true },
     //{ path: "contact", key: "contact", component: <ContactPage />, exact: true },
     //{ path: "portfolio/:slug", key: "projectDetail", component: <ProjectDetailPage />, exact: true },
   ];
