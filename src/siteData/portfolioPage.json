@@ -1,0 +1,58 @@
+{
+  "projectMinis": [
+    {
+      "slug": "tor-docker-scraper",
+      "project_type": "Python",
+      "title": "Tor Docker Scraper",
+      "photo_main": "portfolio/check.torproject.orgMain.png"
+    },
+    {
+      "slug": "gtopo30-utilities",
+      "project_type": "C",
+      "title": "GTOPO30 Utilities",
+      "photo_main": "portfolio/gtopoMain.png"
+    },
+    {
+      "slug": "pgmUtilities",
+      "project_type": "C",
+      "title": "PGM Utilities",
+      "photo_main": "portfolio/pgmMain.png"
+    },
+    {
+      "slug": "wordle",
+      "project_type": "Java",
+      "title": "Java Wordle",
+      "photo_main": "portfolio/wordleMain.png"
+    },
+    {
+      "slug": "passwordmanager",
+      "project_type": "Python",
+      "title": "Encrypted Password Manager",
+      "photo_main": "portfolio/passwordManagerMain.png"
+    },
+    {
+      "slug": "heatmaps",
+      "project_type": "Python",
+      "title": "Python Heatmap Generator",
+      "photo_main": "portfolio/scannerImageMain.png"
+    },
+    {
+      "slug": "towerofhanoi",
+      "project_type": "Javascript",
+      "title": "Tower of Hanoi puzzle",
+      "photo_main": "portfolio/towerMain.png"
+    },
+    {
+      "slug": "sudoku",
+      "project_type": "Javascript",
+      "title": "Animated Sudoku Solver",
+      "photo_main": "portfolio/sudokuProjectMain.png"
+    },
+    {
+      "slug": "sortingalgorithms",
+      "project_type": "Javascript",
+      "title": "Sorting Algorithms Visualiser",
+      "photo_main": "portfolio/sortingAlgorithmsProjectMain.png"
+    }
+  ]
+}
