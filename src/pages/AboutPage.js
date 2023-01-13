@@ -4,7 +4,6 @@ import { React, Fragment, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 // components
-import SelectBox from "../components/SelectBox";
 import Socials from "../components/Socials";
 import ExamResults from "../components/ExamResults";
 
