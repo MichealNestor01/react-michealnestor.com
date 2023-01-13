@@ -20,6 +20,26 @@ ul {
   list-style: none;
 }
 
+// scroll bar styling
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $colorPrimaryA;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $colorPrimaryB;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $colorSecondary;
+}
+
 //======MIGHT BIN THIS SHIT======//
 // wrappers will be on every page
 .allowScroll {

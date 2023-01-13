@@ -1,20 +1,23 @@
-.projects {
-  &__container {
-    width: 100%;
-    max-height: 92vh;
-    @include flex(flex-start, center, column);
-    &__desktop {
-      p {
-        font-size: 2rem;
-      }
-    }
-    &__mobile {
-      p {
-        font-size: 1.5rem;
-      }
+.portfolioPage {
+  // styling
+  width: 100%;
+  max-height: 92vh;
+  /* width */
+
+  @include flex(flex-start, center, column);
+  &__desktop {
+    p {
+      font-size: 2rem;
     }
   }
-  &__title {
+  &__mobile {
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  // children
+  .title {
     color: $colorSecondary;
     &__desktop {
       font-size: 4rem;
@@ -23,7 +26,7 @@
       font-size: 2.3rem;
     }
   }
-  &__intro {
+  .intro {
     color: $colorPrimaryB;
     text-align: justify;
     &__desktop {
@@ -33,23 +36,9 @@
       width: 98%;
     }
   }
-  &__minisContainer {
-    margin-top: 2rem;
-    width: 100%;
-    @include flex(center, center, column);
-  }
-  &__minisRow {
-    width: 100%;
-    &__desktop {
-      @include flex(center, center, row);
-    }
-    &__mobile {
-      @include flex(center, center, column);
-    }
-  }
-  &__selectBox {
+  .selectBox {
+    // styling
     margin-top: 1rem;
-
     &__desktop {
       @include flex(flex-start, center, row);
       width: 80%;
@@ -58,11 +47,21 @@
       @include flex(space-between, center, row);
       width: 98%;
     }
-  }
-  &__selectBoxTitle {
-    color: $colorPrimaryB;
-    &__desktop {
-      margin-right: 2rem;
+
+    // children
+    .selectBoxTitle {
+      color: $colorPrimaryB;
+      &__desktop {
+        margin-right: 2rem;
+      }
     }
+  }
+  .minisContainer {
+    margin-top: 20px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
   }
 }
