@@ -25,23 +25,13 @@ const reducer = (state, action) => {
   }
 };
 
-// I recognise that this code is a bit ugly, however it allows me to dynamically
-// load images stored locally, so it is staying.
-/*
-const images = (photos) => {
-  const photoDivs = photos.map((photo, index) => {
-    return useImage(photo[1]);
-  });
-  return photoDivs;
-};
-*/
 const PhotoGallery = ({ photos }) => {
   const [imageState, dispatch] = useReducer(reducer, initalState);
   const [indicatorDivs, setIndicatorDivs] = useState();
 
   //gallery setup
-  const photoDivs = photos.map((photo, index) => {
-    return <img className="gallery__image" key={photo[0]} src={photo[1]} alt={photo[0]} />;
+  const photoDivs = photos.map((photo) => {
+    return <img className="image" key={photo[0]} src={photo[1]} alt={photo[0]} />;
   });
 
   const [currentImage, setCurrentImage] = useState(photoDivs[imageState.imageIndex]);
@@ -57,11 +47,7 @@ const PhotoGallery = ({ photos }) => {
         <div
           key={i}
           onClick={() => dispatch({ type: "set", index: i })}
-          className={
-            imageState.imageIndex === i
-              ? "gallery__indicator__active gallery__indicator"
-              : "gallery__indicator"
-          }
+          className={imageState.imageIndex === i ? "indicator__active indicator" : "indicator"}
         />
       );
     }
@@ -70,13 +56,13 @@ const PhotoGallery = ({ photos }) => {
 
   return (
     <section className="gallery">
-      <div className="gallery__imageContainer">{currentImage}</div>
-      <div className="gallery__controls">
-        <button className="gallery__button" onClick={() => dispatch({ type: "decrement", totalImages })}>
+      <div className="imageContainer">{currentImage}</div>
+      <div className="controls">
+        <button className="button" onClick={() => dispatch({ type: "decrement", totalImages })}>
           {"<"}
         </button>
-        <div className="gallery__indicatorsWrapper">{indicatorDivs}</div>
-        <button className="gallery__button" onClick={() => dispatch({ type: "increment", totalImages })}>
+        <div className="indicators">{indicatorDivs}</div>
+        <button className="button" onClick={() => dispatch({ type: "increment", totalImages })}>
           {">"}
         </button>
       </div>
