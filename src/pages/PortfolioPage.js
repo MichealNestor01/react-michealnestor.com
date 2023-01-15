@@ -1,7 +1,6 @@
-import React from "react";
 // hooks
 import { useSelector } from "react-redux";
-import { Fragment, useEffect, useState } from "react";
+import { React, Fragment, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 // components
