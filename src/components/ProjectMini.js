@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
-import useImage from "../hooks/useImage";
 
 const ProjectMini = ({ photo, type, slug, title, screenWidth }) => {
   const navigate = useNavigate();
-  const { loading, error, image } = useImage(photo);
 
   let suffix = "__desktop";
   if (screenWidth < 1250) {
@@ -27,7 +25,7 @@ const ProjectMini = ({ photo, type, slug, title, screenWidth }) => {
     >
       <h1>{title}</h1>
       <div className="imgCover" />
-      <img className="img" src={image} alt={title} />
+      <img className="img" src={photo} alt={title} />
     </motion.div>
   );
 };
