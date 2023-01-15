@@ -1,0 +1,110 @@
+{
+  "tor-docker-scraper": {
+    "slug": "tor-docker-scraper",
+    "source_code": "https://github.com/MichealNestor01/tor-scraper-docker",
+    "project_type": "Python",
+    "title": "Tor Docker Scraper",
+    "description": "This project provides a docker image that contains a python program that allows you scrape screenshots and html data from any url including onion sites. This is uses a modified version of selenium for tor (tor-selenium) and makes use of a virtual frame buffer and modified tor config files to enable firefox to run through the terminal while still be able to capture video output.",
+    "date_completed": "2022-09-01T12:00:00Z",
+    "photo_main": "/images/portfolio/check.torproject.orgMain.png",
+    "photo_1": "https://michealnestor.com/media/photos/portfolio/tor-docker-scraper/nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqx_Ajb4a1U.png",
+    "photo_2": "https://michealnestor.com/media/photos/portfolio/tor-docker-scraper/Screenshot_from_2022-10-07_22-28-58.png",
+    "photo_3": "https://michealnestor.com/media/photos/portfolio/tor-docker-scraper/Screenshot_from_2022-10-07_22-29-51.png"
+  },
+  "gtopo30-utilities": {
+    "slug": "gtopo30-utilities",
+    "source_code": "https://github.com/MichealNestor01/gtopo30-utilities",
+    "project_type": "C",
+    "title": "GTOPO30 Utilities",
+    "description": "I created a set of utilities for manipulating the GTOPO30 dataset. The GTOPO30 dataset is a 30 arc-second resolution elevation scan of the planet. The most challenging utility was gtopoAssembleReduce.c which reads the entire gtopo30 dataset (27 DEM files)  from disk, assembles it in memory, but does not write it to disk. Instead, it should apply a reduction factor and only write the reduced version to disk. This project was a piece of coursework for \"COMP1921 Programming Project\"",
+    "date_completed": "2022-05-25T18:00:00Z",
+    "photo_main": "/images/portfolio/gtopoMain.png",
+    "photo_1": null,
+    "photo_2": null,
+    "photo_3": null
+  },
+  "pgm-utilities": {
+    "slug": "pgm-utilities",
+    "source_code": "https://github.com/MichealNestor01/pgm-utilities",
+    "project_type": "C",
+    "title": "PGM Utilities",
+    "description": "This project includes 7 programs or 'utilities' for manipulating PGM image files. It is written entirely in C. The utilities provided are, copy, compare, ascii/binary format converters, compression, tiling and then the assembling of tiles. This project was handed in as a piece of coursework for \"COMP1921 Programming Project\"",
+    "date_completed": "2022-04-25T18:00:00Z",
+    "photo_main": "/images/portfolio/pgmMain.png",
+    "photo_1": "/images/portfolio/pgmTile.png",
+    "photo_2": null,
+    "photo_3": null
+  },
+  "wordle": {
+    "slug": "wordle",
+    "source_code": "https://github.com/MichealNestor01/java-wordle",
+    "project_type": "Java",
+    "title": "Java Wordle",
+    "description": "This was a piece of coursework for \"COMP1721 Object Oriented Programming\". It is a version of the game wordle that can be played in the command line. The user can choose today's wordle or a specific day's wordle,  view their last game, see their historical game statistics and see a histogram of guess number distribution. There is also an accessible version of the game made for people who with issues visualising colour.",
+    "date_completed": "2022-03-04T12:00:00Z",
+    "photo_main": "/images/portfolio/wordleMain.png",
+    "photo_1": "/images/portfolio/wordle2.png",
+    "photo_2": null,
+    "photo_3": null
+  },
+  "passwordmanager": {
+    "slug": "passwordmanager",
+    "source_code": "https://github.com/MichealNestor01/Encrypted-Password-Manager",
+    "project_type": "Python",
+    "title": "Encrypted Password Manager",
+    "description": "This is a simple command line based program which I created to learn about encryption and secure password protection. I learned key skills such as hashing, encryption and creating callback functions (threading Timer objects) in Python.",
+    "date_completed": "2021-07-24T18:00:00Z",
+    "photo_main": "/images/portfolio/passwordManagerMain.png",
+    "photo_1": "/images/portfolio/passwordManager2.png",
+    "photo_2": null,
+    "photo_3": null
+  },
+  "heatmaps": {
+    "slug": "heatmaps",
+    "source_code": "https://github.com/MichealNestor01/black-and-white-image-scanner",
+    "project_type": "Python",
+    "title": "Python Heatmap Generator",
+    "description": "Scans a black and white image and produces a heat map of the density of black pixels within the given image. This was a commission project that I created in May 2021. It will split a given image into squares 331x331 and take the count of black pixels in each. It will use this count to produce a heat map of the density of black pixels as well as text file with the count of each region's black pixel.",
+    "date_completed": "2021-05-27T18:00:00Z",
+    "photo_main": "/images/portfolio/scannerImageMain.png",
+    "photo_1": "/images/portfolio/heatmap1.png",
+    "photo_2": "/images/portfolio/heatmap2.png",
+    "photo_3": null
+  },
+  "towerofhanoi": {
+    "slug": "towerofhanoi",
+    "source_code": "https://github.com/MichealNestor01/Tower-of-Hanoi-Puzzle",
+    "project_type": "Javascript",
+    "title": "Tower of Hanoi puzzle",
+    "description": "My computer science teacher challenged me to build a web app to animate the solving of the Tower of Hanoi puzzle. This was after a friend and I were playing with a physical model in class.",
+    "date_completed": "2021-04-25T18:00:00Z",
+    "photo_main": "/images/portfolio/towerMain.png",
+    "photo_1": "/images/portfolio/tower1.png",
+    "photo_2": "/images/portfolio/tower2.png",
+    "photo_3": null
+  },
+  "sudoku": {
+    "slug": "sudoku",
+    "source_code": "https://github.com/MichealNestor01/Sudoku-Solver",
+    "project_type": "Javascript",
+    "title": "Animated Sudoku Solver",
+    "description": "This web app allows you to play Sudoku and also watch an animation of a back tracking algorithm solve it. This project taught me about recursion, and gave me practice with Javascript and asynchronous code.",
+    "date_completed": "2020-09-04T18:00:00Z",
+    "photo_main": "/images/portfolio/sudokuProjectMain.png",
+    "photo_1": "/images/portfolio/sudoku1.png",
+    "photo_2": "/images/portfolio/sudoku2.png",
+    "photo_3": "/images/portfolio/sudoku3.png"
+  },
+  "sortingalgorithms": {
+    "slug": "sortingalgorithms",
+    "source_code": "https://github.com/MichealNestor01/Sorting-Algorithms-Visualiser",
+    "project_type": "Javascript",
+    "title": "Sorting Algorithms Visualiser",
+    "description": "This is a simple web app that visualises the bubble sort and quick soft algorithms. It was one of my first Javascript projects and pushed me to learn how asynchronous code works.",
+    "date_completed": "2020-07-22T17:23:58Z",
+    "photo_main": "/images/portfolio/sortingAlgorithmsProjectMain.png",
+    "photo_1": "/images/portfolio/sorting1.png",
+    "photo_2": "/images/portfolio/sorting2.png",
+    "photo_3": "/images/portfolio/sorting3.png"
+  }
+}
