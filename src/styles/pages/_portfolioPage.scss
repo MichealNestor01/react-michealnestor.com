@@ -18,7 +18,9 @@
 
   // children
   .title {
-    color: $colorSecondary;
+    width: 80%;
+    margin-top: 10px;
+    color: $colorPrimaryB;
     &__desktop {
       font-size: 4rem;
     }

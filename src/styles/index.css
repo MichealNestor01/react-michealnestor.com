@@ -1502,7 +1502,9 @@ ul {
 }
 
 .portfolioPage .title {
-  color: #72e2ae;
+  width: 80%;
+  margin-top: 10px;
+  color: #fafafa;
 }
 
 .portfolioPage .title__desktop {
