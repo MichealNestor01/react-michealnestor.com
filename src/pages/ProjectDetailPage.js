@@ -70,7 +70,7 @@ const ProjectDetailPage = () => {
                 variants={buttonVariants}
                 whileTap="tap"
                 whileHover="hover"
-                href={`${domainName}/api/portfolio/${slug}`}
+                href={`${domainName}projects/${slug}`}
                 target="_blank"
                 className="button"
               >
