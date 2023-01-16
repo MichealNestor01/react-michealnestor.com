@@ -1,0 +1,91 @@
+<!--This is the html file for my sorting algorithms visualiser-->
+<!--The logic behind the program is explained in the linked javascript file-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Algorithms Visualiser</title>
+    <!--prettier-ignore-->
+    <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <!--prettier-ignore-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Sorting Algorithms Visualiser</h1>
+    </header>
+    <!--'controls' is a panel at the top of the page which allows you to generate colour objects, 
+      change the speed of the algorithm, and change the algorithm used to sort the colours-->
+    <div class="controls-container">
+      <section class="controls">
+        <div class="control-module">
+          <p>Algorithm:</p>
+          <div class="custom-select-wrapper">
+            <div class="custom-select">
+              <div class="custom-select-trigger">
+                <span>Bubble Sort</span>
+                <div class="arrow"></div>
+              </div>
+              <div class="custom-options">
+                <!--prettier-ignore-->
+                <span class="custom-option selected bubble-sort" id="bubble">Bubble Sort</span>
+                <!--prettier-ignore-->
+                <span class="custom-option quick-sort" id="quick">Quick Sort</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="control-module">
+          <!--This item count is updated by js-->
+          <p class="item-number-container">Item Count: <span class="item-number">30</span></p>
+          <div class="slider-container">
+            <!--prettier-ignore-->
+            <input type="range" class="item-counter" max="100" min="10" value="30" />
+          </div>
+        </div>
+        <div class="control-module">
+          <p>Generate:</p>
+          <button class="generate-button"><i class="fas fa-sync"></i></button>
+        </div>
+        <div class="control-module">
+          <p>Solve:</p>
+          <button class="play-button"><i class="fas fa-play"></i></button>
+        </div>
+      </section>
+    </div>
+    <section class="main">
+      <!--bubble stats displays statistics relevant to the current bubble sort-->
+      <div class="bubble-stats stats">
+        <!--prettier-ignore-->
+        <h2>Bubble Sort:</h2>
+        <p>
+          Comparisons:
+          <span class="counter-span" id="comparisons">0</span>
+          Swaps:
+          <span class="counter-span" id="swaps">0</span>
+          Passes:
+          <span class="counter-span" id="passes">0</span>
+        </p>
+      </div>
+      <div class="quick-stats stats">
+        <!--prettier-ignore-->
+        <h2>Quick Sort:</h2>
+        <p>
+          Pivots:
+          <span class="counter-span" id="pivots">0</span>
+        </p>
+      </div>
+      <!--Screen is populated by the colour objects that are to be sorted, it is 
+        filled by said objects through the javascript object-->
+      <div class="screen"></div>
+    </section>
+    <footer>
+      <p>&copy; Micheal Nestor 2020</p>
+    </footer>
+    <!--prettier-ignore-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js" integrity="sha256-gX8uuyxN8stSMHWO9arnnKyenTOALaVAcVB3b6P87e4=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
