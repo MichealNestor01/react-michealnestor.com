@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
-import { React, useEffect, Fragment } from "react";
+import { React, Fragment } from "react";
 import { motion } from "framer-motion";
 import PhotoGallery from "../components/PhotoGallery";
 import { dateConverter } from "../functions/dateConverter";
@@ -98,9 +98,7 @@ const ProjectDetailPage = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>
-          Micheal Nestor {`${slug}`} | {`${title}`}
-        </title>
+        <title>Micheal Nestor | {`${title}`}</title>
         <meta name="description" content={`Click to read about Micheal Nestor's ${title} project.`} />
       </Helmet>
       <section className={`projectDetailPage projectDetailPage${suffix}`}>{loadedContent}</section>
