@@ -72,7 +72,7 @@ const ProjectDetailPage = () => {
                 whileHover="hover"
                 href={`${domainName}projects/${slug}`}
                 target="_blank"
-                className="button"
+                className="button globalButton"
               >
                 Run Project
               </motion.a>
@@ -84,13 +84,25 @@ const ProjectDetailPage = () => {
                 whileHover="hover"
                 href={source_code}
                 target="_blank"
-                className="button"
+                className="button globalButton"
               >
                 Source Code
               </motion.a>
             )}
           </section>
         </section>
+      </section>
+      <section>
+        <motion.a
+          variants={buttonVariants}
+          whileTap="tap"
+          whileHover="hover"
+          href={`${domainName}projects/${slug}`}
+          target="_blank"
+          className="button"
+        >
+          ⮜ Other Projects ⮜
+        </motion.a>
       </section>
     </Fragment>
   );

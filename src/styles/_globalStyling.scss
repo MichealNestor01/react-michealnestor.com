@@ -20,6 +20,22 @@ ul {
   list-style: none;
 }
 
+.globalButton {
+  @include flex(center, center, row);
+  cursor: pointer;
+  background-color: $colorSecondary;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: $colorPrimaryA;
+  font-weight: 700;
+  p {
+    user-select: none;
+  }
+}
+
 // scroll bar styling
 ::-webkit-scrollbar {
   width: 8px;

@@ -16,6 +16,38 @@ ul {
   list-style: none;
 }
 
+.globalButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+  background-color: #72e2ae;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: #111b30;
+  font-weight: 700;
+}
+
+.globalButton p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -1376,36 +1408,10 @@ ul {
 }
 
 .landingPage .content .button {
-  color: #111b30;
-  background-color: #72e2ae;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-size: 1.9rem;
-  cursor: pointer;
   padding: 30px 40px;
   margin-top: 15px;
-  border-radius: 100px;
-  font-weight: 700;
   width: 300px;
   height: 40px;
-}
-
-.landingPage .content .button p {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .landingPage .content .imageContainer {
@@ -1775,16 +1781,7 @@ ul {
 }
 
 .projectDetailPage .main .descriptionContainer .buttons .button {
-  cursor: pointer;
-  background-color: #72e2ae;
-  border: none;
   padding: 10px 25px;
-  border-radius: 30px;
-  font-size: 1.9rem;
-  text-decoration: none;
-  color: #111b30;
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .contact__container {

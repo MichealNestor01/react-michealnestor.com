@@ -62,7 +62,7 @@ const LandingPage = () => {
             whileTap="tap"
             whileHover="hover"
             onClick={() => navigate("portfolio")}
-            className="button"
+            className="button globalButton"
           >
             <p>My Portfolio</p>
           </motion.div>

@@ -61,20 +61,10 @@
       }
     }
     .button {
-      color: $colorPrimaryA;
-      background-color: $colorSecondary;
-      @include flex(center, center, row);
-      font-size: 1.9rem;
-      cursor: pointer;
       padding: 30px 40px;
       margin-top: 15px;
-      border-radius: 100px;
-      font-weight: 700;
       width: 300px;
       height: 40px;
-      p {
-        user-select: none;
-      }
     }
     .imageContainer {
       @include flex(center, center, row);
