@@ -1609,6 +1609,10 @@ ul {
   overflow-y: scroll;
 }
 
+.projectDetailPage .backButton {
+  margin: 20px 0px;
+}
+
 .projectDetailPage .header__desktop {
   margin: 40px 0px 20px 0px;
   display: -webkit-box;

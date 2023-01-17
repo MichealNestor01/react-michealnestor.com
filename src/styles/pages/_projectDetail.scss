@@ -5,6 +5,9 @@
   overflow-y: scroll;
 
   // children
+  .backButton {
+    margin: 20px 0px;
+  }
   .header {
     // styling
     &__desktop {

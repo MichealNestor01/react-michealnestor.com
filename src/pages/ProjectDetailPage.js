@@ -6,10 +6,13 @@ import PhotoGallery from "../components/PhotoGallery";
 import { dateConverter } from "../functions/dateConverter";
 import { Helmet } from "react-helmet";
 import { domainName } from "../store/index";
+import { useNavigate } from "react-router";
+
 import projects from "../siteData/projects.json";
 
 const ProjectDetailPage = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const screenWidth = useSelector((state) => state.ui.screenWidth);
   const {
     project_type,
@@ -21,7 +24,7 @@ const ProjectDetailPage = () => {
     photo_1,
     photo_2,
     photo_3,
-  } = projects[`${slug}`]; // useSelector((state) => state.projects.projectFocused);
+  } = projects[`${slug}`];
 
   let suffix = "__desktop";
   if (screenWidth < 1600) {
@@ -92,18 +95,15 @@ const ProjectDetailPage = () => {
           </section>
         </section>
       </section>
-      <section>
-        <motion.a
-          variants={buttonVariants}
-          whileTap="tap"
-          whileHover="hover"
-          href={`${domainName}projects/${slug}`}
-          target="_blank"
-          className="button"
-        >
-          ⮜ Other Projects ⮜
-        </motion.a>
-      </section>
+      <motion.div
+        variants={buttonVariants}
+        whileTap="tap"
+        whileHover="hover"
+        onClick={() => navigate(`/portfolio`)}
+        className="backButton globalButton"
+      >
+        ⮜ Other Projects ⮜
+      </motion.div>
     </Fragment>
   );
 
