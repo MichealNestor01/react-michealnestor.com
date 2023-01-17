@@ -36,8 +36,6 @@ const ProjectDetailPage = () => {
     hover: { scale: 1.1, transition: { duration: 0.3 } },
   };
 
-  let loadedContent;
-
   const dateString = dateConverter(date_completed);
 
   const photosList = [[title, photo_main]];
@@ -52,68 +50,64 @@ const ProjectDetailPage = () => {
     photosList.push([title, photo_3]);
   }
 
-  loadedContent = (
-    <Fragment>
-      <section className={`header header${suffix}`}>
-        <h1 className={`title title${suffix}`}>{title}</h1>
-        <section className={`details detailsr${suffix}`}>
-          <h2 className={`detail detail${suffix}`}>Completed: {dateString}</h2>
-          <h2 className={`detail detail${suffix}`}>Project Type: {project_type}</h2>
-        </section>
-      </section>
-      <section className={`main main${suffix}`}>
-        <section className={`galleryContainer galleryContainer${suffix}`}>
-          <PhotoGallery photos={photosList} />
-        </section>
-        <section className={`descriptionContainer descriptionContainer${suffix}`}>
-          <p className={`description description${suffix}`}>{description}</p>
-          <section className="buttons">
-            {project_type === "Javascript" && screenWidth > 1600 && (
-              <motion.a
-                variants={buttonVariants}
-                whileTap="tap"
-                whileHover="hover"
-                href={`${domainName}projects/${slug}`}
-                target="_blank"
-                className="button globalButton"
-              >
-                Run Project
-              </motion.a>
-            )}
-            {source_code && (
-              <motion.a
-                variants={buttonVariants}
-                whileTap="tap"
-                whileHover="hover"
-                href={source_code}
-                target="_blank"
-                className="button globalButton"
-              >
-                Source Code
-              </motion.a>
-            )}
-          </section>
-        </section>
-      </section>
-      <motion.div
-        variants={buttonVariants}
-        whileTap="tap"
-        whileHover="hover"
-        onClick={() => navigate(`/portfolio`)}
-        className="backButton globalButton"
-      >
-        ⮜ Other Projects ⮜
-      </motion.div>
-    </Fragment>
-  );
-
   return (
     <Fragment>
       <Helmet>
         <title>Micheal Nestor | {`${title}`}</title>
         <meta name="description" content={`Click to read about Micheal Nestor's ${title} project.`} />
       </Helmet>
-      <section className={`projectDetailPage projectDetailPage${suffix}`}>{loadedContent}</section>
+      <section className={`projectDetailPage projectDetailPage${suffix}`}>
+        <section className={`header header${suffix}`}>
+          <h1 className={`title title${suffix}`}>{title}</h1>
+          <section className={`details detailsr${suffix}`}>
+            <h2 className={`detail detail${suffix}`}>Completed: {dateString}</h2>
+            <h2 className={`detail detail${suffix}`}>Project Type: {project_type}</h2>
+          </section>
+        </section>
+        <section className={`main main${suffix}`}>
+          <section className={`galleryContainer galleryContainer${suffix}`}>
+            <PhotoGallery photos={photosList} />
+          </section>
+          <section className={`descriptionContainer descriptionContainer${suffix}`}>
+            <p className={`description description${suffix}`}>{description}</p>
+            <section className="buttons">
+              {project_type === "Javascript" && screenWidth > 1600 && (
+                <motion.a
+                  variants={buttonVariants}
+                  whileTap="tap"
+                  whileHover="hover"
+                  href={`${domainName}projects/${slug}`}
+                  target="_blank"
+                  className="button globalButton"
+                >
+                  Run Project
+                </motion.a>
+              )}
+              {source_code && (
+                <motion.a
+                  variants={buttonVariants}
+                  whileTap="tap"
+                  whileHover="hover"
+                  href={source_code}
+                  target="_blank"
+                  className="button globalButton"
+                >
+                  Source Code
+                </motion.a>
+              )}
+            </section>
+          </section>
+        </section>
+        <motion.div
+          variants={buttonVariants}
+          whileTap="tap"
+          whileHover="hover"
+          onClick={() => navigate(`/portfolio`)}
+          className="backButton globalButton"
+        >
+          ⮜ Other Projects ⮜
+        </motion.div>
+      </section>
     </Fragment>
   );
 };
