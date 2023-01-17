@@ -1800,7 +1800,7 @@ ul {
   padding: 10px 25px;
 }
 
-.contact__container {
+.contactPage {
   width: 100%;
   height: 90vh;
   overflow-y: scroll;
@@ -1819,7 +1819,12 @@ ul {
           flex-direction: column;
 }
 
-.contact__errorMessage {
+.contactPage .title {
+  font-size: 3rem;
+  color: #72e2ae;
+}
+
+.contactPage .errorMessage {
   width: 80%;
   color: #72e2ae;
   margin-top: 1rem;
@@ -1827,12 +1832,7 @@ ul {
   text-align: center;
 }
 
-.contact__title {
-  font-size: 3rem;
-  color: #72e2ae;
-}
-
-.contact__form {
+.contactPage .form {
   margin-top: 2rem;
   width: 80%;
   display: -webkit-box;
@@ -1850,14 +1850,8 @@ ul {
           flex-direction: column;
 }
 
-.contact__form__inputError {
-  color: #72e2ae;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 0.2rem;
-}
-
-.contact__form__section {
+.contactPage .form .section {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1871,95 +1865,84 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 15px;
 }
 
-.contact__form__labelInputWrapper__desktop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.contactPage .form .section .labelInputWrapper {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
-.contact__form__labelInputWrapper__mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contact__form__label {
-  margin-right: 1rem;
-  width: 20rem;
+.contactPage .form .section .labelInputWrapper .label {
   font-size: 2rem;
   color: #fafafa;
 }
 
-.contact__form__label__desktop {
+.contactPage .form .section .labelInputWrapper .label__desktop {
   text-align: right;
 }
 
-.contact__form__label__mobile {
+.contactPage .form .section .labelInputWrapper .label__mobile {
   text-align: center;
 }
 
-.contact__form__input {
+.contactPage .form .section .labelInputWrapper .input {
   outline: none;
   border: none;
   background-color: #fafafa;
   color: #111b30;
 }
 
-.contact__form__input__invalid {
+.contactPage .form .section .labelInputWrapper .input__invalid {
   background-color: #72e2ae;
 }
 
-.contact__form__input__desktop {
+.contactPage .form .section .labelInputWrapper .input__desktop {
   font-size: 2rem;
-  width: 30rem;
 }
 
-.contact__form__input__mobile {
+.contactPage .form .section .labelInputWrapper .input__mobile {
   font-size: 1.5rem;
-  width: 20rem;
 }
 
-.contact__form__input::-webkit-input-placeholder {
-  color: #222222;
+.contactPage .form .section .labelInputWrapper .input::-webkit-input-placeholder {
+  color: #111b30;
+  opacity: 60%;
 }
 
-.contact__form__input:-ms-input-placeholder {
-  color: #222222;
+.contactPage .form .section .labelInputWrapper .input:-ms-input-placeholder {
+  color: #111b30;
+  opacity: 60%;
 }
 
-.contact__form__input::-ms-input-placeholder {
-  color: #222222;
+.contactPage .form .section .labelInputWrapper .input::-ms-input-placeholder {
+  color: #111b30;
+  opacity: 60%;
 }
 
-.contact__form__input::placeholder {
-  color: #222222;
+.contactPage .form .section .labelInputWrapper .input::placeholder {
+  color: #111b30;
+  opacity: 60%;
 }
 
-.contact__form__button {
+.contactPage .form .section textarea {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contactPage .form .section .inputError {
+  color: #72e2ae;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+.contactPage .form .section .button {
   cursor: pointer;
   background-color: #72e2ae;
   border: none;
@@ -1972,23 +1955,16 @@ ul {
   color: #111b30;
 }
 
-.contact__form__button__desktop {
-  margin-top: 12rem;
+.contactPage .form .section .button__desktop {
   font-size: 2.5rem;
 }
 
-.contact__form__button__mobile {
-  margin-top: 14rem;
+.contactPage .form .section .button__mobile {
   font-size: 2rem;
 }
 
-.contact__form__button:disabled {
+.contactPage .form .section .button:disabled {
   background-color: #fafafa;
-}
-
-.contact__form textarea {
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
 }
 
 .notFoundPage {

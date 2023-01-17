@@ -1,100 +1,104 @@
-.contact {
-  &__container {
-    width: 100%;
-    height: 90vh;
-    overflow-y: scroll;
-    @include flex(flex-start, center, column);
+.contactPage {
+  // styling
+  width: 100%;
+  height: 90vh;
+  overflow-y: scroll;
+  @include flex(flex-start, center, column);
+
+  // children
+  .title {
+    font-size: 3rem;
+    color: $colorSecondary;
   }
-  &__errorMessage {
+  .errorMessage {
     width: 80%;
     color: $colorSecondary;
     margin-top: 1rem;
     font-size: 2rem;
     text-align: center;
   }
-  &__title {
-    font-size: 3rem;
-    color: $colorSecondary;
-  }
-  &__form {
+  .form {
+    // styling
     margin-top: 2rem;
     width: 80%;
     @include flex(flex-start, center, column);
-    &__inputError {
-      color: $colorSecondary;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-top: 0.2rem;
-    }
-    &__section {
-      @include flex(flex-start, center, column);
-      height: 2rem;
-      margin-bottom: 3rem;
-    }
-    &__labelInputWrapper {
-      &__desktop {
-        @include flex(center, flex-start, row);
-      }
-      &__mobile {
-        @include flex(center, center, column);
-      }
-    }
-    &__label {
-      margin-right: 1rem;
-      width: 20rem;
-      font-size: 2rem;
-      color: $colorPrimaryB;
-      &__desktop {
-        text-align: right;
-      }
-      &__mobile {
-        text-align: center;
-      }
-    }
-    &__input {
-      outline: none;
-      border: none;
-      background-color: $colorPrimaryB;
-      color: $colorPrimaryA;
 
-      &__invalid {
-        background-color: $colorSecondary;
+    // children
+    .section {
+      // styling
+      width: 60%;
+      @include flex(flex-start, center, column);
+      margin-bottom: 15px;
+
+      // children
+      .labelInputWrapper {
+        // styling
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+
+        // children
+        .label {
+          font-size: 2rem;
+          color: $colorPrimaryB;
+          &__desktop {
+            text-align: right;
+          }
+          &__mobile {
+            text-align: center;
+          }
+        }
+        .input {
+          outline: none;
+          border: none;
+          background-color: $colorPrimaryB;
+          color: $colorPrimaryA;
+
+          &__invalid {
+            background-color: $colorSecondary;
+          }
+          &__desktop {
+            font-size: 2rem;
+          }
+          &__mobile {
+            font-size: 1.5rem;
+          }
+          &::placeholder {
+            color: $colorPrimaryA;
+            opacity: 60%;
+          }
+        }
       }
-      &__desktop {
-        font-size: 2rem;
-        width: 30rem;
-      }
-      &__mobile {
+      textarea {
+        width: 100%;
         font-size: 1.5rem;
-        width: 20rem;
+        font-family: "Montserrat", sans-serif;
       }
-    }
-    &__input::placeholder {
-      color: rgb(34, 34, 34);
-    }
-    &__button {
-      cursor: pointer;
-      background-color: $colorSecondary;
-      border: none;
-      border-radius: 2rem;
-      padding: 0.5rem 1rem;
-      user-select: none;
-      color: $colorPrimaryA;
-      &__desktop {
-        margin-top: 12rem;
-        font-size: 2.5rem;
+      .inputError {
+        color: $colorSecondary;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0.2rem;
       }
-      &__mobile {
-        margin-top: 14rem;
-        font-size: 2rem;
+      .button {
+        cursor: pointer;
+        background-color: $colorSecondary;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.5rem 1rem;
+        user-select: none;
+        color: $colorPrimaryA;
+        &__desktop {
+          font-size: 2.5rem;
+        }
+        &__mobile {
+          font-size: 2rem;
+        }
+        &:disabled {
+          background-color: $colorPrimaryB;
+        }
       }
-    }
-    &__button:disabled {
-      background-color: $colorPrimaryB;
-    }
-    textarea {
-      font-size: 1.5rem;
-      font-family: "Montserrat", sans-serif;
     }
   }
 }

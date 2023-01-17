@@ -13,8 +13,8 @@ import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
+import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
-//import ContactPage from "./pages/ContactPage";
 
 //components
 import Header from "./components/Header";
@@ -55,8 +55,8 @@ function App() {
     { path: "about", key: "about", component: <AboutPage />, exact: true },
     { path: "portfolio", key: "portfolio", component: <PortfolioPage />, exact: true },
     { path: "portfolio/:slug", key: "projectDetail", component: <ProjectDetailPage />, exact: true },
+    { path: "contact", key: "contact", component: <ContactPage />, exact: true },
     { path: "*", key: "notFound", component: <NotFound /> },
-    //{ path: "contact", key: "contact", component: <ContactPage />, exact: true },
   ];
 
   // setup the route components for react router
