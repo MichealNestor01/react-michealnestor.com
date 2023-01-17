@@ -6,6 +6,11 @@
           box-sizing: border-box;
 }
 
+h1,
+p {
+  color: #fafafa;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,6 +51,7 @@ ul {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: #111b30;
 }
 
 ::-webkit-scrollbar {
@@ -575,10 +581,15 @@ ul {
   -webkit-transition-property: border, color;
   transition-property: border, color;
   border: solid 0.5rem #72e2ae;
+}
+
+.projectMini:hover h1 {
   color: #72e2ae;
 }
 
 .projectMini h1 {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -752,6 +763,7 @@ ul {
 }
 
 .selectBox__text {
+  color: #72e2ae;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1977,5 +1989,36 @@ ul {
 .contact__form textarea {
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
+}
+
+.notFoundPage {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.notFoundPage h1 {
+  margin-top: 24px;
+  font-size: 3rem;
+}
+
+.notFoundPage p {
+  margin-top: 12px;
+  font-size: 2rem;
+}
+
+.notFoundPage button {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=index.css.map */

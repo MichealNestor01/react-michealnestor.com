@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+h1,
+p {
+  color: $colorPrimaryB;
+}
+
 // standard body styling
 body {
   font-family: "Montserrat", sans-serif;
@@ -33,6 +38,7 @@ ul {
   font-weight: 700;
   p {
     user-select: none;
+    color: $colorPrimaryA;
   }
 }
 

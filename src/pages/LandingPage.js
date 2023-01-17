@@ -1,6 +1,6 @@
 // hooks
-import React, { Fragment, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { Fragment } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
