@@ -1,0 +1,76 @@
+<!--This is the html document for the sudoku program, there is not much to see as the 
+main soduku board is built in java script-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Sudoku Solver</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Animation controls is a small panel to the left of the board which allows the user
+    to change the speed of the animation-->
+    <section class="animation-controls">
+      <h1>Animation controls</h1>
+      <input type="range" class="speed-slider" max="300" min="1" value="200" />
+      <p class="speed">Speed: <span class="speed-number">200</span></p>
+      <p>
+        This animation visualises a backtracking algorithm which tests new 
+        numbers in each position until the board is complete. Speed is measured
+        in the number of numbers tested each second.
+      </p>
+    </section>
+    <section class="header">
+      <h1>Sudoku</h1>
+    </section>
+    <!--The controls section provides a solve button and a generate board button-->
+    <section class="controls">
+      <h2>Solve:</h2>
+      <button class="solve"><i class="fas fa-play"></i></button>
+      <h2>Generate New Board:</h2>
+      <button class="generate"><i class="fas fa-sync"></i></button>
+      <h2>Mistakes:</h2>
+      <div class="cross-container">
+        <div class="cross cross1">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="cross cross2">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="cross cross3">
+          <i class="fa fa-times"></i>
+        </div>
+      </div>
+    </section>
+    <!--This board section is filled in the java script file attatched to this file-->
+    <section class="board"></section>
+    <section class="auto-solve">
+      <div class="auto-solve-container"></div>
+    </section>
+    <!--You are allowed at most 3 mistakes, if you reach this this section pops up-->
+    <section class="fail-pop-up-container">
+      <div class="fail-pop-up active">
+        <button class="close-fail">X</button>
+        <h1>Nice Try!</h1>
+        <p>
+          You have reached the maximum amount of mistakes and wont</br>  
+          be able to make any more guesses.
+        </p>
+        <p id='fail-question'>Would you like the rest of the board to be solved for you?</p>
+        <button class="solve-button">solve</button>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>

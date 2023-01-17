@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!--prettier-ignore-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+      integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+      crossorigin="anonymous"
+    ></script>
+    <title>Tower of Hanoi</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tower of Hanoi Puzzle</h1>
+    </header>
+    <controls-container>
+      <section class="controls">
+        <div class="control-module">
+          <!--This item count is updated by js-->
+          <p class="item-number-container">Item Count: <span class="item-number">5</span></p>
+          <div class="slider-container">
+            <!--prettier-ignore-->
+            <input type="range" class="item-counter" max="15" min="1" value="5" />
+          </div>
+        </div>
+        <div class="control-module">
+          <p>Generate Tower:</p>
+          <button class="generate-button"><i class="fas fa-sync"></i></button>
+        </div>
+        <div class="control-module">
+          <p>Simulate:</p>
+          <button class="play-button"><i class="fas fa-play"></i></button>
+        </div>
+      </section>
+    </controls-container>
+    <screen-container>
+      <!--The screen will have items added to it by the app.js file-->
+      <section class="screen"></section>
+    </screen-container>
+    <footer>
+      <h2>Micheal Nestor 2021</h2>
+    </footer>
+    <!--prettier-ignore-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js" integrity="sha256-gX8uuyxN8stSMHWO9arnnKyenTOALaVAcVB3b6P87e4=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
