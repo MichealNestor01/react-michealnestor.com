@@ -13,6 +13,7 @@ import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
+import NotFound from "./pages/NotFound";
 //import ContactPage from "./pages/ContactPage";
 
 //components
@@ -54,6 +55,7 @@ function App() {
     { path: "about", key: "about", component: <AboutPage />, exact: true },
     { path: "portfolio", key: "portfolio", component: <PortfolioPage />, exact: true },
     { path: "portfolio/:slug", key: "projectDetail", component: <ProjectDetailPage />, exact: true },
+    { path: "*", key: "notFound", component: <NotFound /> },
     //{ path: "contact", key: "contact", component: <ContactPage />, exact: true },
   ];
 

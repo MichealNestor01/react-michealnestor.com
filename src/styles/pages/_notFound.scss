@@ -1,0 +1,15 @@
+.notFoundPage {
+  width: 100%;
+  @include flex(center, center, column);
+  h1 {
+    margin-top: 24px;
+    font-size: 3rem;
+  }
+  p {
+    margin-top: 12px;
+    font-size: 2rem;
+  }
+  button {
+    margin-top: 10px;
+  }
+}
