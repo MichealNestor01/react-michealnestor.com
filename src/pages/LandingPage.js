@@ -40,40 +40,36 @@ const LandingPage = () => {
         <meta name="description" content="Contact Micheal Nestor, let him know how he can help you!" />
       </Helmet>
       <section className="landingPage">
-        {/* 
+        <wrapper>
+          {/* 
           The page is split into two sides, on the left is the content, with a title, short
           bio and then a link to my portfolio
           Then on the right there is an image of myself surrounded by the splash, aswell as
           links to my social medias
         */}
-        <section className="content">
-          {mode === "mobile" && (
+          <section className="content">
             <div className="imageContainer">
               <img src={image} alt="Micheal Nestor" />
             </div>
-          )}
-          <h1 className="title">Welcome!</h1>
-          <p className="paragraph">{bio}</p>
-          <div className="socials">
-            <Socials />
-          </div>
-          <motion.div
-            variants={buttonVariants}
-            whileTap="tap"
-            whileHover="hover"
-            onClick={() => navigate("portfolio")}
-            className="button globalButton"
-          >
-            <p>My Portfolio</p>
-          </motion.div>
-        </section>
-        {mode === "desktop" && (
-          <section className="imageSection">
-            <div className="container">
-              <img src={image} alt="Micheal Nestor" />
+            <h1 className="title">Welcome!</h1>
+            <p className="paragraph">{bio}</p>
+            <div className="socials">
+              <Socials />
             </div>
+            <motion.div
+              variants={buttonVariants}
+              whileTap="tap"
+              whileHover="hover"
+              onClick={() => navigate("portfolio")}
+              className="button globalButton"
+            >
+              <p>My Portfolio</p>
+            </motion.div>
           </section>
-        )}
+          <section className="imageSection">
+            <img src={image} alt="Micheal Nestor" />
+          </section>
+        </wrapper>
       </section>
     </Fragment>
   );
