@@ -2,126 +2,124 @@
   // position and layout
   @include flex(center, flex-start, row);
   // box model
-  height: 90vh;
   width: 100%;
 
   // children
-  .content {
+  wrapper {
     // position and layout
     @include media(">=desktop") {
-      @include flex(flex-start, flex-start, column);
-    }
-    @include media("<=phone") {
-      @include flex(center, center, column);
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2%;
     }
     // box model
-    @include media(">=desktop") {
-      width: 55%;
-    }
-    @include media("<=phone") {
-      width: 100%;
-    }
+    width: 80%;
+    max-width: 2000px;
 
-    // children
-    .title {
-      // box model
-      @include media(">=desktop") {
-        margin-top: 100px;
-      }
-      // typography
-      color: $colorSecondary;
-      font-weight: 700;
-      @include media(">=desktop") {
-        font-size: 6rem;
-      }
-      @include media("<=phone") {
-        font-size: 3rem;
-      }
-    }
-
-    .paragraph {
-      // box model
-      @include media(">=desktop") {
-        margin-top: 10px;
-        width: 90%;
-      }
-      @include media("<=phone") {
-        width: 95%;
-      }
-      // typography
-      color: $colorPrimaryB;
-      font-weight: 700;
-      @include media(">=desktop") {
-        font-size: 2.5rem;
-        text-align: justify;
-      }
-      @include media("<=phone") {
-        font-size: 1.75rem;
-      }
-    }
-    .socials {
+    .content {
       // position and layout
-      @include flex(flex-start, center, row);
+      @include media(">=desktop") {
+        @include flex(flex-start, flex-start, column);
+        background-color: rgb(159, 148, 255);
+      }
+      @include media("<=phone") {
+        @include flex(center, center, column);
+      }
       // box model
-      margin-top: 15px;
-      width: 180px;
-      height: 70px;
+      @include media(">=desktop") {
+      }
+      @include media("<=phone") {
+        width: 100%;
+      }
+
       // children
-      a {
-        // position and layout
-        @include flex(flex-start, flex-start, row);
+      .title {
         // box model
-        margin-right: 30px;
-        height: 100%;
-        width: 80px;
+        @include media(">=desktop") {
+          margin-top: 100px;
+        }
+        // typography
+        color: $colorSecondary;
+        font-weight: 700;
+        @include media(">=desktop") {
+          font-size: 6rem;
+        }
+        @include media("<=phone") {
+          font-size: 3rem;
+        }
+      }
+
+      .paragraph {
+        // box model
+        @include media(">=desktop") {
+          margin-top: 10px;
+        }
+        // typography
+        color: $colorPrimaryB;
+        font-weight: 700;
+        @include media(">=desktop") {
+          font-size: 2.5rem;
+        }
+        @include media("<=phone") {
+          font-size: 1.75rem;
+        }
+      }
+      .socials {
+        // position and layout
+        @include flex(flex-start, center, row);
+        // box model
+        margin-top: 15px;
+        width: 180px;
+        height: 70px;
         // children
-        img {
-          filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
+        a {
+          // position and layout
+          @include flex(flex-start, flex-start, row);
+          // box model
+          margin-right: 30px;
           height: 100%;
+          width: 80px;
+          // children
+          img {
+            filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
+            height: 100%;
+          }
+        }
+      }
+      .button {
+        // box model
+        margin-top: 15px;
+        width: 300px;
+        height: 40px;
+        padding: 30px 40px;
+      }
+      .imageContainer {
+        // position and layout
+        @include flex(center, center, row);
+        // display and visibility
+        @include media(">=desktop") {
+          display: none;
+        }
+        //children
+        img {
+          // box model
+          width: 20rem;
         }
       }
     }
-    .button {
-      // box model
-      margin-top: 15px;
-      width: 300px;
-      height: 40px;
-      padding: 30px 40px;
-    }
-    .imageContainer {
+    .imageSection {
       // position and layout
       @include flex(center, center, row);
+      // display and visibility
+      @include media("<desktop") {
+        display: none;
+      }
+      background-color: rgb(250, 135, 250);
       //children
       img {
+        margin-top: 100px;
         // box model
-        width: 20rem;
-      }
-    }
-  }
-  .imageSection {
-    // position and layout
-    position: relative;
-    @include flex(center, flex-start, row);
-    // box model
-    width: 25vw;
-    height: 90%;
-    // display and visibility
-    @include media("<=phone") {
-      display: none;
-    }
-
-    //children
-    .container {
-      // position and layout
-      @include flex(center, center, row);
-      // box model
-      margin-top: 8rem;
-      width: 18rem;
-      height: 30rem;
-      // children
-      img {
-        // box model
-        width: 35rem;
+        width: 100%;
       }
     }
   }

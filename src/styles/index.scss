@@ -27,6 +27,18 @@ $colorSecondary: #72e2ae;
 // external files (not written by me)
 @import "./external/breakpoints";
 
+body {
+  @include media(">=desktop") {
+    background-color: rgb(255, 94, 94);
+  }
+  @include media(">=tablet", "<desktop") {
+    background-color: rgb(255, 188, 94);
+  }
+  @include media(">=phone", "<tablet") {
+    background-color: rgb(193, 255, 94);
+  }
+}
+
 // components:
 @import "./components/header";
 @import "./components/loadingSpinner";

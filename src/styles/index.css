@@ -100,6 +100,24 @@ ul {
 * Testing
 *
 **/
+@media (min-width: 1366px) {
+  body {
+    background-color: #ff5e5e;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1365px) {
+  body {
+    background-color: #ffbc5e;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  body {
+    background-color: #c1ff5e;
+  }
+}
+
 .header {
   max-height: 5rem;
   min-height: 3rem;
@@ -1310,12 +1328,26 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 90vh;
   width: 100%;
 }
 
+.landingPage wrapper {
+  width: 80%;
+  max-width: 2000px;
+}
+
 @media (min-width: 1366px) {
-  .landingPage .content {
+  .landingPage wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.5fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
+    gap: 2%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .landingPage wrapper .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1329,11 +1361,12 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background-color: #9f94ff;
   }
 }
 
 @media (max-width: 360px) {
-  .landingPage .content {
+  .landingPage wrapper .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1350,73 +1383,59 @@ ul {
   }
 }
 
-@media (min-width: 1366px) {
-  .landingPage .content {
-    width: 55%;
-  }
-}
-
 @media (max-width: 360px) {
-  .landingPage .content {
+  .landingPage wrapper .content {
     width: 100%;
   }
 }
 
-.landingPage .content .title {
+.landingPage wrapper .content .title {
   color: #72e2ae;
   font-weight: 700;
 }
 
 @media (min-width: 1366px) {
-  .landingPage .content .title {
+  .landingPage wrapper .content .title {
     margin-top: 100px;
   }
 }
 
 @media (min-width: 1366px) {
-  .landingPage .content .title {
+  .landingPage wrapper .content .title {
     font-size: 6rem;
   }
 }
 
 @media (max-width: 360px) {
-  .landingPage .content .title {
+  .landingPage wrapper .content .title {
     font-size: 3rem;
   }
 }
 
-.landingPage .content .paragraph {
+.landingPage wrapper .content .paragraph {
   color: #fafafa;
   font-weight: 700;
 }
 
 @media (min-width: 1366px) {
-  .landingPage .content .paragraph {
+  .landingPage wrapper .content .paragraph {
     margin-top: 10px;
-    width: 90%;
-  }
-}
-
-@media (max-width: 360px) {
-  .landingPage .content .paragraph {
-    width: 95%;
   }
 }
 
 @media (min-width: 1366px) {
-  .landingPage .content .paragraph {
+  .landingPage wrapper .content .paragraph {
     font-size: 2.5rem;
-    text-align: justify;
   }
 }
 
 @media (max-width: 360px) {
-  .landingPage .content .paragraph {
+  .landingPage wrapper .content .paragraph {
     font-size: 1.75rem;
   }
 }
 
-.landingPage .content .socials {
+.landingPage wrapper .content .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1435,7 +1454,7 @@ ul {
   height: 70px;
 }
 
-.landingPage .content .socials a {
+.landingPage wrapper .content .socials a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1454,20 +1473,20 @@ ul {
   width: 80px;
 }
 
-.landingPage .content .socials a img {
+.landingPage wrapper .content .socials a img {
   -webkit-filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
           filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
   height: 100%;
 }
 
-.landingPage .content .button {
+.landingPage wrapper .content .button {
   margin-top: 15px;
   width: 300px;
   height: 40px;
   padding: 30px 40px;
 }
 
-.landingPage .content .imageContainer {
+.landingPage wrapper .content .imageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1483,36 +1502,17 @@ ul {
           flex-direction: row;
 }
 
-.landingPage .content .imageContainer img {
-  width: 20rem;
-}
-
-.landingPage .imageSection {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 25vw;
-  height: 90%;
-}
-
-@media (max-width: 360px) {
-  .landingPage .imageSection {
+@media (min-width: 1366px) {
+  .landingPage wrapper .content .imageContainer {
     display: none;
   }
 }
 
-.landingPage .imageSection .container {
+.landingPage wrapper .content .imageContainer img {
+  width: 20rem;
+}
+
+.landingPage wrapper .imageSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1526,13 +1526,18 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 8rem;
-  width: 18rem;
-  height: 30rem;
+  background-color: #fa87fa;
 }
 
-.landingPage .imageSection .container img {
-  width: 35rem;
+@media (max-width: 1365px) {
+  .landingPage wrapper .imageSection {
+    display: none;
+  }
+}
+
+.landingPage wrapper .imageSection img {
+  margin-top: 100px;
+  width: 100%;
 }
 
 .portfolioPage {
