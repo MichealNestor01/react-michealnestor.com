@@ -14,7 +14,7 @@ import Socials from "../components/Socials";
 
 // component page for the ladning page
 const LandingPage = () => {
-  const { loading, error, image } = useImage(data.image);
+  const { image } = useImage(data.image);
   const bio = data.bio;
 
   // SETUP HOOKS //
@@ -27,9 +27,9 @@ const LandingPage = () => {
     hover: { scale: 1.1, transition: { duration: 0.3 } },
   };
 
-  let suffix = "__desktop";
+  let mode = "desktop";
   if (screenWidth < 1550) {
-    suffix = "__mobile";
+    mode = "mobile";
   }
 
   // Return the page component //
@@ -39,21 +39,21 @@ const LandingPage = () => {
         <title>Micheal Nestor | Software Engineer</title>
         <meta name="description" content="Contact Micheal Nestor, let him know how he can help you!" />
       </Helmet>
-      <section className={`landingPage landingPage${suffix}`}>
+      <section className="landingPage">
         {/* 
           The page is split into two sides, on the left is the content, with a title, short
           bio and then a link to my portfolio
           Then on the right there is an image of myself surrounded by the splash, aswell as
           links to my social medias
         */}
-        <section className={`content content${suffix}`}>
-          {suffix === "__mobile" && (
+        <section className="content">
+          {mode === "mobile" && (
             <div className="imageContainer">
               <img src={image} alt="Micheal Nestor" />
             </div>
           )}
-          <h1 className={`title title${suffix}`}>Welcome!</h1>
-          <p className={`paragraph paragraph${suffix}`}>{bio}</p>
+          <h1 className="title">Welcome!</h1>
+          <p className="paragraph">{bio}</p>
           <div className="socials">
             <Socials />
           </div>
@@ -67,8 +67,8 @@ const LandingPage = () => {
             <p>My Portfolio</p>
           </motion.div>
         </section>
-        {suffix === "__desktop" && (
-          <section className={`imageSection imageSection${suffix}`}>
+        {mode === "desktop" && (
+          <section className="imageSection">
             <div className="container">
               <img src={image} alt="Micheal Nestor" />
             </div>

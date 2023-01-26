@@ -1,59 +1,80 @@
-// class for my landing page
 .landingPage {
-  // container styling
-  width: 100%;
-  height: 90vh;
+  // position and layout
   @include flex(center, flex-start, row);
+  // box model
+  height: 90vh;
+  width: 100%;
 
   // children
   .content {
-    // content section styling
-    &__desktop {
+    // position and layout
+    @include media(">=desktop") {
       @include flex(flex-start, flex-start, column);
+    }
+    @include media("<=phone") {
+      @include flex(center, center, column);
+    }
+    // box model
+    @include media(">=desktop") {
       width: 55%;
     }
-    &__mobile {
-      @include flex(center, center, column);
+    @include media("<=phone") {
       width: 100%;
     }
 
     // children
     .title {
-      font-weight: 700;
-      color: $colorSecondary;
-      &__desktop {
-        font-size: 6rem;
+      // box model
+      @include media(">=desktop") {
         margin-top: 100px;
       }
-      &__mobile {
+      // typography
+      color: $colorSecondary;
+      font-weight: 700;
+      @include media(">=desktop") {
+        font-size: 6rem;
+      }
+      @include media("<=phone") {
         font-size: 3rem;
       }
     }
+
     .paragraph {
-      font-weight: 700;
-      color: $colorPrimaryB;
-      &__desktop {
-        text-align: justify;
-        width: 90%;
-        font-size: 2.5rem;
+      // box model
+      @include media(">=desktop") {
         margin-top: 10px;
+        width: 90%;
       }
-      &__mobile {
-        width: 100%;
-        font-size: 1.75rem;
+      @include media("<=phone") {
         width: 95%;
+      }
+      // typography
+      color: $colorPrimaryB;
+      font-weight: 700;
+      @include media(">=desktop") {
+        font-size: 2.5rem;
+        text-align: justify;
+      }
+      @include media("<=phone") {
+        font-size: 1.75rem;
       }
     }
     .socials {
-      margin-top: 15px;
+      // position and layout
       @include flex(flex-start, center, row);
+      // box model
+      margin-top: 15px;
       width: 180px;
       height: 70px;
+      // children
       a {
+        // position and layout
+        @include flex(flex-start, flex-start, row);
+        // box model
         margin-right: 30px;
         height: 100%;
         width: 80px;
-        @include flex(flex-start, flex-start, row);
+        // children
         img {
           filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
           height: 100%;
@@ -61,35 +82,45 @@
       }
     }
     .button {
-      padding: 30px 40px;
+      // box model
       margin-top: 15px;
       width: 300px;
       height: 40px;
+      padding: 30px 40px;
     }
     .imageContainer {
+      // position and layout
       @include flex(center, center, row);
+      //children
       img {
+        // box model
         width: 20rem;
       }
     }
   }
   .imageSection {
-    // image section styling
+    // position and layout
+    position: relative;
+    @include flex(center, flex-start, row);
+    // box model
     width: 25vw;
     height: 90%;
-    @include flex(center, flex-start, row);
-    position: relative;
-    &__mobile {
+    // display and visibility
+    @include media("<=phone") {
       display: none;
     }
 
     //children
     .container {
+      // position and layout
+      @include flex(center, center, row);
+      // box model
       margin-top: 8rem;
       width: 18rem;
       height: 30rem;
-      @include flex(center, center, row);
+      // children
       img {
+        // box model
         width: 35rem;
       }
     }
