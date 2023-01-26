@@ -113,7 +113,7 @@
       }
       .examWrapper {
         //styling
-        @include flex(center, flex-start, row);
+        @include flex(flex-start, flex-start, row);
         min-height: 400px;
 
         //chilren
