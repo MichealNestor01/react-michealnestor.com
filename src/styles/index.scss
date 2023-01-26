@@ -24,6 +24,9 @@ $colorSecondary: #72e2ae;
 //===import files===//
 @import "globalStyling";
 
+// external files (not written by me)
+@import "./external/breakpoints";
+
 // components:
 @import "./components/header";
 @import "./components/loadingSpinner";
