@@ -3,50 +3,47 @@
   @include flex(center, flex-start, row);
   // box model
   width: 100%;
-
+  overflow-y: scroll;
+  height: 95vh;
   // children
   wrapper {
     // position and layout
-    @include media(">=desktop") {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 2%;
+    @include media(">=LGtablet") {
+      @include grid(1.5fr, 1fr, 0fr, 2%);
+    }
+    @include media(">=tablet", "<LGtablet") {
+      @include grid(1.2fr, 1fr, 0fr, 1%);
+    }
+    @include media("<tablet") {
+      @include flex(center, center, column);
     }
     // box model
-    width: 80%;
-    max-width: 2000px;
+    margin-bottom: 50px;
+    @include media(">tablet") {
+      width: 80%;
+    }
+    @include media("<tablet") {
+      width: 98%;
+    }
 
+    // children
     .content {
       // position and layout
-      @include media(">=desktop") {
+      @include media(">LGtablet") {
         @include flex(flex-start, flex-start, column);
-        background-color: rgb(159, 148, 255);
       }
-      @include media("<=phone") {
+      @include media("<tablet") {
         @include flex(center, center, column);
-      }
-      // box model
-      @include media(">=desktop") {
-      }
-      @include media("<=phone") {
-        width: 100%;
       }
 
       // children
       .title {
         // box model
-        @include media(">=desktop") {
-          margin-top: 100px;
-        }
+        margin-top: var(--landingTopMargin);
         // typography
         color: $colorSecondary;
         font-weight: 700;
-        @include media(">=desktop") {
-          font-size: 6rem;
-        }
-        @include media("<=phone") {
-          font-size: 3rem;
-        }
+        font-size: var(--fontSizeLargeHeading);
       }
 
       .paragraph {
@@ -57,11 +54,9 @@
         // typography
         color: $colorPrimaryB;
         font-weight: 700;
-        @include media(">=desktop") {
-          font-size: 2.5rem;
-        }
-        @include media("<=phone") {
-          font-size: 1.75rem;
+        font-size: var(--fontSizeLargeParagraph);
+        @include media("<tablet") {
+          text-align: center;
         }
       }
       .socials {
@@ -71,6 +66,12 @@
         margin-top: 15px;
         width: 180px;
         height: 70px;
+        @include media(">3k") {
+          height: 120px;
+        }
+        @include media(">4k") {
+          height: 150px;
+        }
         // children
         a {
           // position and layout
@@ -79,6 +80,13 @@
           margin-right: 30px;
           height: 100%;
           width: 80px;
+          @include media(">3k") {
+            width: 120px;
+          }
+          @include media(">4k") {
+            width: 150px;
+            margin-right: 50px;
+          }
           // children
           img {
             filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
@@ -89,21 +97,42 @@
       .button {
         // box model
         margin-top: 15px;
-        width: 300px;
-        height: 40px;
-        padding: 30px 40px;
+        margin-bottom: 5px;
+        @include media(">4k") {
+          width: 700px;
+          height: 130px;
+          border-radius: 400px;
+        }
+        @include media(">3k", "<4k") {
+          width: 500px;
+          height: 90px;
+          border-radius: 400px;
+        }
+        @include media(">phone", "<=3k") {
+          width: 300px;
+          height: 60px;
+        }
+        @include media("<=phone") {
+          width: 260px;
+          height: 60px;
+        }
       }
       .imageContainer {
         // position and layout
         @include flex(center, center, row);
         // display and visibility
-        @include media(">=desktop") {
+        @include media(">=tablet") {
           display: none;
         }
         //children
         img {
           // box model
-          width: 20rem;
+          @include media(">phone") {
+            width: 20rem;
+          }
+          @include media("<=phone") {
+            width: 90%;
+          }
         }
       }
     }
@@ -111,14 +140,13 @@
       // position and layout
       @include flex(center, center, row);
       // display and visibility
-      @include media("<desktop") {
+      @include media("<tablet") {
         display: none;
       }
-      background-color: rgb(250, 135, 250);
       //children
       img {
-        margin-top: 100px;
         // box model
+        margin-top: var(--landingTopMargin);
         width: 100%;
       }
     }
