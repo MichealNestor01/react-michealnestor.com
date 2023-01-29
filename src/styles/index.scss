@@ -13,6 +13,13 @@ $colorSecondary: #72e2ae;
   flex-direction: $direction;
 }
 
+// display grid mixin
+@mixin grid($col1, $col2, $col3, $gap) {
+  display: grid;
+  grid-template-columns: $col1 $col2 $col3;
+  gap: $gap;
+}
+
 // simple mixin to put something in the center of the page
 @mixin absoluteCenter() {
   position: absolute;
@@ -22,20 +29,28 @@ $colorSecondary: #72e2ae;
 }
 
 //===import files===//
-@import "globalStyling";
-
 // external files (not written by me)
 @import "./external/breakpoints";
 
+// global styling
+@import "globalStyling";
+
 body {
+  // clipping
   @include media(">=desktop") {
-    background-color: rgb(255, 94, 94);
+    //background-color: rgb(255, 94, 94);
   }
-  @include media(">=tablet", "<desktop") {
-    background-color: rgb(255, 188, 94);
+  @include media(">=LGtablet", "<desktop") {
+    //background-color: rgb(255, 188, 94);
+  }
+  @include media(">=tablet", "<LGtablet") {
+    //background-color: rgb(193, 255, 94);
   }
   @include media(">=phone", "<tablet") {
-    background-color: rgb(193, 255, 94);
+    //background-color: rgb(94, 255, 188);
+  }
+  @include media("<phone") {
+    //background-color: rgb(94, 132, 255);
   }
 }
 
