@@ -8,6 +8,110 @@
   box-sizing: border-box;
 }
 
+// standard font sizing
+/*
+  "phone": 360px,
+  "tablet": 768px,
+  "LGtablet": 1120px,
+  "desktop": 1366px,
+  "LGdesktop": 1920px, 
+  "3k": 2500px,
+  "4k": 3000px,
+*/
+// Standardised sizings by screen size
+@include media(">4k") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 9rem;
+    --fontSizeMediumHeading: 4rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 5rem;
+    --fontSizeMediumParagraph: 4rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 150px;
+  }
+}
+@include media(">=3k", "<4k") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 7.5rem;
+    --fontSizeMediumHeading: 4rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 3.5rem;
+    --fontSizeMediumParagraph: 3rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 120px;
+  }
+}
+@include media(">=desktop", "<3k") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 6rem;
+    --fontSizeMediumHeading: 4rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 2.5rem;
+    --fontSizeMediumParagraph: 2rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 80px;
+  }
+}
+@include media(">=LGtablet", "<desktop") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 5rem;
+    --fontSizeMediumHeading: 4rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 2rem;
+    --fontSizeMediumParagraph: 2rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 60px;
+  }
+}
+@include media(">=tablet", "<LGtablet") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 4rem;
+    --fontSizeMediumHeading: 4rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 1.75rem;
+    --fontSizeMediumParagraph: 2rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 50px;
+  }
+}
+@include media(">=phone", "<tablet") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 4rem;
+    --fontSizeMediumHeading: 4rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 1.5rem;
+    --fontSizeMediumParagraph: 2rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 0px;
+  }
+}
+@include media("<=phone") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 3rem;
+    --fontSizeMediumHeading: 4rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 1.5rem;
+    --fontSizeMediumParagraph: 2rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 0px;
+  }
+}
+
+// standardised font colour
 h1,
 p {
   color: $colorPrimaryB;
@@ -25,6 +129,7 @@ ul {
   list-style: none;
 }
 
+// standard button styling
 .globalButton {
   @include flex(center, center, row);
   cursor: pointer;
@@ -32,7 +137,7 @@ ul {
   border: none;
   padding: 10px 25px;
   border-radius: 30px;
-  font-size: 1.9rem;
+  font-size: var(--fontSizeMediumParagraph);
   text-decoration: none;
   color: $colorPrimaryA;
   font-weight: 700;
@@ -62,6 +167,12 @@ ul {
   background: $colorSecondary;
 }
 
+// default height and width
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 //======MIGHT BIN THIS SHIT======//
 // wrappers will be on every page
 .allowScroll {
@@ -77,10 +188,4 @@ ul {
   overflow: hidden;
   height: 100vh;
   width: 100%;
-}
-
-// default height and width
-#root {
-  width: 100%;
-  height: 100%;
 }
