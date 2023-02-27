@@ -12,12 +12,12 @@ import data from "../siteData/landingPage.json";
 // components
 import Socials from "../components/Socials";
 
-// component page for the ladning page
 const LandingPage = () => {
+  // get page data
   const { image } = useImage(data.image);
   const bio = data.bio;
 
-  // SETUP HOOKS //
+  // setup hooks
   const navigate = useNavigate();
   const screenWidth = useSelector((state) => state.ui.screenWidth);
 
