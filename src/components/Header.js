@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
 
 const Header = () => {
+  // setup hooks
   const screenWidth = useSelector((state) => state.ui.screenWidth);
   const [openLinks, setOpenLinks] = useState(false);
 
@@ -29,11 +30,9 @@ const Header = () => {
   // create the burger component for use in mobile navigation
   const burgerClickHander = () => setOpenLinks(!openLinks);
 
-  const barClasses = openLinks
-    ? "header__burger__bar__open header__burger__bar"
-    : "header__burger__bar__closed header__burger__bar";
+  const barClasses = openLinks ? "bar__open bar" : "bar__closed bar";
   const burger = (
-    <div className="header__burger" onClick={burgerClickHander}>
+    <div className="burger" onClick={burgerClickHander}>
       <span className={barClasses}></span>
       <span className={barClasses}></span>
       <span className={barClasses}></span>
@@ -41,11 +40,11 @@ const Header = () => {
   );
 
   const bugerInitial = { opacity: 0, x: "100%" };
-  const bugerMounted = { opacity: 1, x: "0%" };
+  const bugerMounted = { opacity: 1, x: "-0%", width: "100vw" };
 
   const burgerNav = (
     <motion.section
-      className="header__burger__nav"
+      className="burgerNav"
       transition={{ duration: 0.5 }}
       initial={bugerInitial}
       animate={bugerMounted}
@@ -55,28 +54,18 @@ const Header = () => {
     </motion.section>
   );
 
-  //===animation setup===//
-  let linkContent = burger;
-  let headerContainerClasses = "titleContainer titleContainer__mobile";
-  let navClasses = "nav nav__mobile";
-  let headerClasses = "header header__mobile";
-  if (screenWidth > 1200) {
-    linkContent = <ul>{navLinks}</ul>;
-    headerClasses = "header header__desktop";
-    headerContainerClasses = "titleContainer titleContainer__desktop";
-    navClasses = "nav nav__desktop";
-  }
-  const titleClasses = openLinks ? "title title__blue" : "title title__white";
-
   // return the component //
   return (
-    <section key="header" className={headerClasses}>
-      <div className={headerContainerClasses}>
-        <Link className={titleClasses} to="/" onClick={() => setOpenLinks(false)}>
+    <section key="header" className="header">
+      <div className="titleContainer">
+        <Link className="title" to="/" onClick={() => setOpenLinks(false)}>
           Micheal Nestor
         </Link>
       </div>
-      <nav className={navClasses}>{linkContent}</nav>
+      <nav className="nav">
+        <ul>{navLinks}</ul>
+        {burger}
+      </nav>
       <AnimatePresence>{openLinks ? burgerNav : ""}</AnimatePresence>
     </section>
   );

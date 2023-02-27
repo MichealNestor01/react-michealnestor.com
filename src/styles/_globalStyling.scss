@@ -23,7 +23,7 @@
   :root {
     // font sizing
     --fontSizeLargeHeading: 9rem;
-    --fontSizeMediumHeading: 4rem;
+    --fontSizeMediumHeading: 8rem;
     --fontSizeHeading: 3rem;
     --fontSizeLargeParagraph: 5rem;
     --fontSizeMediumParagraph: 4rem;
@@ -36,7 +36,7 @@
   :root {
     // font sizing
     --fontSizeLargeHeading: 7.5rem;
-    --fontSizeMediumHeading: 4rem;
+    --fontSizeMediumHeading: 6rem;
     --fontSizeHeading: 3rem;
     --fontSizeLargeParagraph: 3.5rem;
     --fontSizeMediumParagraph: 3rem;
@@ -45,11 +45,24 @@
     --landingTopMargin: 120px;
   }
 }
-@include media(">=desktop", "<3k") {
+@include media(">=LGdesktop", "<3k") {
+  :root {
+    // font sizing
+    --fontSizeLargeHeading: 7.5rem;
+    --fontSizeMediumHeading: 5rem;
+    --fontSizeHeading: 3rem;
+    --fontSizeLargeParagraph: 3.5rem;
+    --fontSizeMediumParagraph: 3rem;
+    --fontSizeParagraph: 1.75rem;
+    // landing page
+    --landingTopMargin: 120px;
+  }
+}
+@include media(">=desktop", "<LGdesktop") {
   :root {
     // font sizing
     --fontSizeLargeHeading: 6rem;
-    --fontSizeMediumHeading: 4rem;
+    --fontSizeMediumHeading: 4.5rem;
     --fontSizeHeading: 3rem;
     --fontSizeLargeParagraph: 2.5rem;
     --fontSizeMediumParagraph: 2rem;
@@ -62,52 +75,64 @@
   :root {
     // font sizing
     --fontSizeLargeHeading: 5rem;
-    --fontSizeMediumHeading: 4rem;
-    --fontSizeHeading: 3rem;
+    --fontSizeMediumHeading: 3.6rem;
+    --fontSizeHeading: 2.5rem;
     --fontSizeLargeParagraph: 2rem;
     --fontSizeMediumParagraph: 2rem;
     --fontSizeParagraph: 1.75rem;
     // landing page
     --landingTopMargin: 60px;
+    // burger bar
+    --burgerBarWidth: 60px;
+    --burgerBarHeight: 10px;
   }
 }
 @include media(">=tablet", "<LGtablet") {
   :root {
     // font sizing
     --fontSizeLargeHeading: 4rem;
-    --fontSizeMediumHeading: 4rem;
-    --fontSizeHeading: 3rem;
+    --fontSizeMediumHeading: 3.5rem;
+    --fontSizeHeading: 2rem;
     --fontSizeLargeParagraph: 1.75rem;
     --fontSizeMediumParagraph: 2rem;
     --fontSizeParagraph: 1.75rem;
     // landing page
     --landingTopMargin: 50px;
+    // burger bar
+    --burgerBarWidth: 40px;
+    --burgerBarHeight: 8px;
   }
 }
 @include media(">=phone", "<tablet") {
   :root {
     // font sizing
     --fontSizeLargeHeading: 4rem;
-    --fontSizeMediumHeading: 4rem;
-    --fontSizeHeading: 3rem;
+    --fontSizeMediumHeading: 2.3rem;
+    --fontSizeHeading: 2rem;
     --fontSizeLargeParagraph: 1.5rem;
     --fontSizeMediumParagraph: 2rem;
     --fontSizeParagraph: 1.75rem;
     // landing page
     --landingTopMargin: 0px;
+    // burger bar
+    --burgerBarWidth: 30px;
+    --burgerBarHeight: 5px;
   }
 }
 @include media("<=phone") {
   :root {
     // font sizing
     --fontSizeLargeHeading: 3rem;
-    --fontSizeMediumHeading: 4rem;
-    --fontSizeHeading: 3rem;
+    --fontSizeMediumHeading: 1.6rem;
+    --fontSizeHeading: 1.6rem;
     --fontSizeLargeParagraph: 1.5rem;
     --fontSizeMediumParagraph: 2rem;
     --fontSizeParagraph: 1.75rem;
     // landing page
     --landingTopMargin: 0px;
+    // burger bar
+    --burgerBarWidth: 20px;
+    --burgerBarHeight: 5px;
   }
 }
 
