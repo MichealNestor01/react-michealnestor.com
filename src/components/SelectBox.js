@@ -3,33 +3,27 @@ import React from "react";
 import { useState } from "react";
 
 // this is a simple select box component
-const SelectBox = ({ options, changeHandler, screenWidth }) => {
+const SelectBox = ({ options, changeHandler }) => {
+  // hook setup
   const [showOptions, setShowOptions] = useState(false);
   const [current, setCurrent] = useState(0);
-
-  let suffix = "__desktop";
-  if (screenWidth < 1250) {
-    suffix = "__mobile";
-  }
 
   // get the current option
   const selectedOption = options[current];
 
   // showBoxHandler toggles show options
-  const showBoxHandler = () => {
-    setShowOptions(!showOptions);
-  };
+  const showBoxHandler = () => setShowOptions(!showOptions);
 
   // setup the classes
-  let selectionClasses = `selectBox__selections selectBox__selections${suffix}`;
-  let arrowClasses = `selectBox__arrow selectBox__arrow${suffix}`;
-  let optionClasses = `selectBox__option selectBox__option${suffix}`;
+  let selectionClasses = `selections`;
+  let arrowClasses = `arrow`;
+  let optionClasses = `option`;
 
   // if the toggle is on edit the classes
   if (showOptions) {
-    selectionClasses = `selectBox__selections selectBox__selections${suffix} selectBox__selections__visible`;
-    arrowClasses = `selectBox__arrow selectBox__arrow${suffix} selectBox__arrow__rotate`;
-    optionClasses = `selectBox__option selectBox__option${suffix} selectBox__option__visible`;
+    selectionClasses = `selections selections__visible`;
+    arrowClasses = `arrow arrow__rotate`;
+    optionClasses = `option  option__visible`;
   }
 
   // map the options to divs
@@ -52,9 +46,9 @@ const SelectBox = ({ options, changeHandler, screenWidth }) => {
 
   // return the select box component
   return (
-    <div className={`selectBox__wrapper selectBox__wrapper${suffix}`}>
-      <section className="selectBox__container" onClick={showBoxHandler}>
-        <p className="selectBox__text">{selectedOption}</p>
+    <div className="selectBox">
+      <section className="container" onClick={showBoxHandler}>
+        <p className="text">{selectedOption}</p>
         <div className={arrowClasses}>{"<"}</div>
       </section>
       <div className={selectionClasses}>{selectOptions}</div>
