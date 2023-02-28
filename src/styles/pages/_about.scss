@@ -30,7 +30,7 @@
       @include flex(center, center, column);
     }
     @include media("<tablet") {
-      width: 100%;
+      width: 98%;
     }
 
     // children
@@ -101,7 +101,7 @@
             width: 180px;
           }
           @include media("<tablet") {
-            width: 140px;
+            width: 135px;
           }
           @include media("<phone") {
             width: 110px;
@@ -150,6 +150,9 @@
           }
           @include media("<LGtablet") {
             width: 90%;
+          }
+          @include media("<tablet") {
+            width: 98%;
           }
 
           border: solid 0.25rem $colorPrimaryB;
