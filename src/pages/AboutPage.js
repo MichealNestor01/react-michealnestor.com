@@ -19,19 +19,6 @@ const AboutPage = () => {
   const screenWidth = useSelector((state) => state.ui.screenWidth);
   const [suffix, setSuffix] = useState("__desktop");
 
-  //===RESPONSIVENESS===//
-  // code for dealing with screen size changes
-  let aboutPageClasses = `aboutPage aboutPage__desktop`;
-  useEffect(() => {
-    if (screenWidth < 1250) {
-      setSuffix("__mobile");
-      aboutPageClasses = `aboutPage aboutPage__mobile allowScroll`;
-    } else {
-      setSuffix("__desktop");
-      aboutPageClasses = `aboutPage aboutPage__desktop`;
-    }
-  }, [screenWidth]);
-
   // simple handler for when the user changes the filter
 
   const skillsContent = (
@@ -64,16 +51,16 @@ const AboutPage = () => {
           content="Micheal Nestor is an experienced software engineer and private tutor"
         />
       </Helmet>
-      <section className={aboutPageClasses}>
-        <div className={`content content${suffix}`}>
+      <section className="aboutPage">
+        <div className="content">
           <div className="box1 box">
-            <section className={`title  title${suffix}`}>
+            <section className="title">
               <h1>About Me</h1>
-              <div className={`socials socials${suffix}`}>
+              <div className="socials">
                 <Socials />
               </div>
             </section>
-            <p className={`description description${suffix}`}>{aboutData}</p>
+            <p className="description">{aboutData}</p>
           </div>
           <div className="box2 box">
             <h1>My Key Skills</h1>

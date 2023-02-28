@@ -38,10 +38,10 @@ $colorSecondary: #72e2ae;
 body {
   // clipping
   @include media(">=desktop") {
-    //background-color: rgb(255, 94, 94);
+    background-color: rgb(255, 94, 94);
   }
   @include media(">=LGtablet", "<desktop") {
-    //background-color: rgb(255, 188, 94);
+    background-color: rgb(255, 188, 94);
   }
   @include media(">=tablet", "<LGtablet") {
     //background-color: rgb(193, 255, 94);
@@ -50,7 +50,7 @@ body {
     //background-color: rgb(94, 255, 188);
   }
   @include media("<phone") {
-    //background-color: rgb(94, 132, 255);
+    background-color: rgb(94, 132, 255);
   }
 }
 

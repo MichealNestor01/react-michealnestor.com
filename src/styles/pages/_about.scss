@@ -1,109 +1,124 @@
 .aboutPage {
-  // styling
-  color: $colorPrimaryB;
+  // display and visibility
+  @include flex(center, flex-start, row);
+  // box model
   width: 100%;
-  @include flex(center, center, row);
-  &__desktop {
-    h1 {
-      font-size: 4rem;
-    }
-  }
-  &__mobile {
-    h1 {
-      font-size: 2rem;
-    }
-  }
-
+  overflow-y: scroll;
+  height: 95vh;
+  // typography
+  color: $colorPrimaryB;
   // children
   h1 {
     color: $colorPrimaryB;
+    font-size: var(--fontSizeHeading);
+  }
+  p {
+    font-size: var(--fontSizeParagraph);
   }
   .content {
-    //Styling
-    &__desktop {
+    // box model
+    margin-bottom: 100px;
+    @include media(">=LGtablet") {
       width: 80%;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2.5%;
     }
-    &__mobile {
-      width: 100%;
+    @include media("<LGtablet", ">=tablet") {
+      margin-top: 10px;
       @include flex(center, center, column);
+    }
+    @include media("<tablet") {
+      width: 100%;
     }
 
     // children
     .box1 {
       .title {
-        // styling
-        &__desktop {
+        // position and layout
+        @include media(">=LGtablet") {
           @include flex(flex-start, center, row);
         }
-        &__mobile {
-          @include flex(center, flex-start, column);
+        @include media("<LGtablet") {
+          @include flex(flex-start, center, row);
         }
-
         // children
         .socials {
+          // position and layout
           @include flex(flex-start, center, row);
-          a {
-            height: 100%;
-            width: 4rem;
-            @include flex(flex-start, flex-start, row);
-            img {
-              filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
-              height: 100%;
-            }
-          }
-          &__desktop {
+          // box-model
+          @include media(">=LGtablet") {
             margin-left: 1rem;
             width: 12rem;
             height: 3rem;
           }
-          &__mobile {
+          @include media("<LGtablet") {
+            margin-left: 1rem;
             width: 10rem;
-            height: 3rem;
+            height: 2.5rem;
+          }
+          @include media("<tablet") {
+            margin-left: 1rem;
+            width: 5rem;
+            height: 2rem;
+          }
+          // children
+          a {
+            // position and layout
+            @include flex(flex-start, flex-start, row);
+            // box model
+            height: 100%;
+            width: 4rem;
+            img {
+              // clipping
+              filter: invert(98%) sepia(4%) saturate(247%) hue-rotate(222deg) brightness(113%);
+              // box model
+              height: 100%;
+            }
           }
         }
       }
       .description {
-        &__desktop {
-          text-align: justify;
-          font-size: 1.75rem;
-        }
-        &__mobile {
-          font-size: 1.5rem;
-        }
+        // typography
+        text-align: justify;
       }
     }
     .box2 {
       // children
       .skillsContainer {
-        list-style-type: square;
-        font-size: 1.75rem;
+        // position and layout
         @include flex(space-between, center, row);
         flex-wrap: wrap;
+        // typography
+        list-style-type: square;
+        font-size: 1.75rem;
+        // children
         li {
+          // box model
           margin-left: 30px;
-          width: 20rem;
+          width: 10rem;
         }
       }
     }
     .box3 {
+      // box model
+      width: 100%;
+      // children
       .selectBox {
-        // styling
-        margin-bottom: 20px;
-        &__desktop {
+        // position and layout
+        @include media(">=LGtablet") {
           @include flex(space-between, center, row);
-          p {
-            font-size: 2rem;
-          }
         }
-        &__mobile {
+        @include media("<LGtablet") {
+          @include flex(center, center, row);
+        }
+        // box model
+        margin-bottom: 20px;
+        font-size: var(--fontSizeParagraph);
+        @include media("<LGtablet") {
           p {
-            font-size: 1.4rem;
             margin-right: 1rem;
           }
-          @include flex(center, center, row);
         }
 
         // children
@@ -113,15 +128,21 @@
       }
       .examWrapper {
         //styling
-        @include flex(flex-start, flex-start, row);
-        min-height: 400px;
+        @include flex(center, flex-start, row);
+        //min-height: 400px;
 
         //chilren
         .examTable {
           // styling
           color: $colorPrimaryB;
-          font-size: 1.5rem;
-          width: 40rem;
+          font-size: var(--fontSizeParagraph);
+          @include media(">=LGtablet") {
+            width: 100%;
+          }
+          @include media("<LGtablet") {
+            width: 90%;
+          }
+
           border: solid 0.25rem $colorPrimaryB;
           text-align: center;
 
@@ -140,7 +161,7 @@
       }
       .achievementDesc {
         font-size: 1.5rem;
-        margin-bottom: 20px;
+        //margin-bottom: 20px;
       }
     }
   }

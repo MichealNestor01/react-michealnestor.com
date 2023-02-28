@@ -5,15 +5,13 @@
     { "skill": "C" },
     { "skill": "Java" },
     { "skill": "JavaScript" },
+    { "skill": "TypeScript" },
     { "skill": "Linux" },
+    { "skill": "GitHub" },
     { "skill": "React.js" },
     { "skill": "Docker" },
     { "skill": "Git" },
-    { "skill": "CSS/SASS" },
-    { "skill": "Django" },
-    { "skill": "React-Redux" },
-    { "skill": "Qt5" },
-    { "skill": "Machine Learning" }
+    { "skill": "CSS/SASS" }
   ],
   "examData": [
     { "exam_type": "GCSE", "title": "Mathematics", "grade": "9" },
