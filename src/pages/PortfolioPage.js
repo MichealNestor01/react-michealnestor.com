@@ -37,7 +37,7 @@ const ProjectsPage = () => {
     }
   }, [projects, filter]);
 
-  //sort the projects into rows of 3, and put those rows into a list
+  //sort the projects into a list of components
   const projectMinis = filteredProjects.map((project) => {
     return (
       <ProjectMini
