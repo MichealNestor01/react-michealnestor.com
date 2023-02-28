@@ -1,69 +1,84 @@
 .portfolioPage {
-  // styling
+  // position and styling
+  @include flex(flex-start, center, column);
+  // box model
   width: 100%;
   max-height: 92vh;
-  /* width */
-
-  @include flex(flex-start, center, column);
-  &__desktop {
-    p {
-      font-size: 2rem;
-    }
-  }
-  &__mobile {
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
+  // typography
+  font-size: var(--fontSizeLargeParagraph);
   // children
   .title {
-    width: 80%;
-    margin-top: 10px;
+    // box model
+    @include media(">=tablet") {
+      width: 80%;
+    }
+    @include media("<tablet") {
+      width: 98%;
+    }
+    margin-top: 5px;
+    // typograophy
     color: $colorPrimaryB;
-    &__desktop {
-      font-size: 4rem;
-    }
-    &__mobile {
-      font-size: 2.3rem;
-    }
+    font-size: var(--fontSizeHeading);
   }
   .intro {
+    // box model
+    @include media(">=tablet") {
+      width: 80%;
+    }
+    @include media("<tablet") {
+      width: 98%;
+    }
+    // typgraphy
     color: $colorPrimaryB;
     text-align: justify;
-    &__desktop {
-      width: 80%;
-    }
-    &__mobile {
-      width: 98%;
-    }
   }
   .selectBox {
-    // styling
-    margin-top: 1rem;
-    &__desktop {
+    // position and layout
+    @include media(">=tablet") {
       @include flex(flex-start, center, row);
+    }
+    @include media("<tablet") {
+      @include flex(space-between, center, row);
+    }
+    // box model
+    margin-top: 1rem;
+    @include media(">=tablet") {
       width: 80%;
     }
-    &__mobile {
-      @include flex(space-between, center, row);
+    @include media("<tablet") {
       width: 98%;
     }
-
     // children
     .selectBoxTitle {
-      color: $colorPrimaryB;
-      &__desktop {
+      // box model
+      @include media(">=tablet") {
         margin-right: 2rem;
       }
+      // typography
+      color: $colorPrimaryB;
     }
   }
   .minisContainer {
     margin-top: 20px;
-    width: 80%;
+    @include media(">=tablet") {
+      width: 80%;
+    }
+    @include media("<tablet") {
+      width: 98%;
+    }
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    @include media(">=LGtablet") {
+      gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include media("<LGtablet") {
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include media("<tablet") {
+      gap: 10px;
+    }
     margin-bottom: 30px;
   }
 }

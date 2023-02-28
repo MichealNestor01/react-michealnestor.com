@@ -7,19 +7,15 @@ import { Helmet } from "react-helmet";
 import ProjectMini from "../components/ProjectMini";
 import SelectBox from "../components/SelectBox";
 
+// site data
 import data from "../siteData/portfolioPage.json";
 
 const ProjectsPage = () => {
-  // setup hooks //
+  // setup hooks
   const projects = data.projectMinis;
   const screenWidth = useSelector((state) => state.ui.screenWidth);
   const [filter, setFilter] = useState("All Projects");
   const [filteredProjects, setFilteredProjects] = useState([...projects]);
-
-  let suffix = "__desktop";
-  if (screenWidth < 1250) {
-    suffix = "__mobile";
-  }
 
   // select box code //
   const options = ["All Projects"];
@@ -41,8 +37,6 @@ const ProjectsPage = () => {
     }
   }, [projects, filter]);
 
-  console.log(projects, options);
-
   //sort the projects into rows of 3, and put those rows into a list
   const projectMinis = filteredProjects.map((project) => {
     return (
@@ -57,25 +51,20 @@ const ProjectsPage = () => {
     );
   });
 
-  let pageClasses = `portfolioPage portfolioPage${suffix}`;
-  if (projectMinis.length > 2 || screenWidth < 1550) {
-    pageClasses = `portfolioPage portfolioPage${suffix} allowScroll`;
-  }
-
   return (
     <Fragment>
       <Helmet>
         <title>Micheal Nestor | Portfolio</title>
         <meta name="description" content="View a selection of Micheal Nestor's best projects" />
       </Helmet>
-      <section className={pageClasses}>
-        <h1 className={`title title${suffix}`}>Projects Portfolio</h1>
-        <p className={`intro intro${suffix}`}>
+      <section className="portfolioPage allowScroll">
+        <h1 className="title">Projects Portfolio</h1>
+        <p className="intro">
           This is a short list of some of the projects I have worked on, click on a project to find out
           more!
         </p>
-        <div className={`selectBox selectBox${suffix}`}>
-          <p className={`selectBoxTitle selectBoxTitle${suffix}`}>Filter Projects: </p>
+        <div className="selectBox">
+          <p className="selectBoxTitle">Filter Projects: </p>
           <SelectBox options={options} changeHandler={changeFilterHandler} screenWidth={screenWidth} />
         </div>
         <div className="minisContainer">{projectMinis}</div>

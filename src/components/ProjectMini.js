@@ -2,13 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 
-const ProjectMini = ({ photo, type, slug, title, screenWidth }) => {
+const ProjectMini = ({ photo, type, slug, title }) => {
   const navigate = useNavigate();
-
-  let suffix = "__desktop";
-  if (screenWidth < 1250) {
-    suffix = "__mobile";
-  }
 
   const variants = {
     tap: { scale: 0.95 },
@@ -17,7 +12,7 @@ const ProjectMini = ({ photo, type, slug, title, screenWidth }) => {
 
   return (
     <motion.div
-      className={`projectMini box projectMini${suffix}`}
+      className="projectMini"
       variants={variants}
       whileTap="tap"
       whileHover="hover"

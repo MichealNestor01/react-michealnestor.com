@@ -1,24 +1,33 @@
 .projectMini {
-  // styling
-  cursor: pointer;
-  position: relative;
-  //margin: 0rem 1rem 2rem 1rem;
-  border: solid 0.5rem $colorPrimaryB;
-  border-color: $colorPrimaryB;
+  // animation
   transition: 0.3s ease;
   transition-property: border, color;
-  color: $colorPrimaryB;
-  &__desktop {
+  // position and layout
+  position: relative;
+  border: solid 0.5rem $colorPrimaryB;
+  border-color: $colorPrimaryB;
+  // box-model
+  @include media(">=LGtablet") {
     height: 15vw;
   }
-  &__mobile {
-    width: 21rem;
-    height: 11.81rem;
+  @include media("<LGtablet") {
+    height: 20vw;
   }
+  @include media("<tablet") {
+    height: 25vw;
+  }
+  // background
+  cursor: pointer;
+  // typography
+  color: $colorPrimaryB;
+  // hover
   &:hover {
+    // animation
     transition: 0.3s ease;
     transition-property: border, color;
+    // box model
     border: solid 0.5rem $colorSecondary;
+    // children
     h1 {
       color: $colorSecondary;
     }
@@ -26,24 +35,34 @@
 
   // children
   h1 {
-    transition: all 0.3s ease;
-    user-select: none;
-    font-size: 2.5rem;
-    width: 100%;
-    text-align: center;
-    z-index: 3;
+    // position and styling
     @include absoluteCenter();
+    z-index: 3;
+    // animation
+    transition: all 0.3s ease;
+    // box model
+    width: 100%;
+    // background
+    user-select: none;
+    // typography
+    font-size: var(--fontSizeLargeParagraph);
+    text-align: center;
   }
   .img {
+    // position and styling
+    @include absoluteCenter();
+    // box model
     width: 100%;
     height: 100%;
-    @include absoluteCenter();
   }
   .imgCover {
+    // position and styling
     z-index: 2;
     @include absoluteCenter();
+    // box model
     width: 100%;
     height: 100%;
+    // background
     background-color: rgba($color: #000, $alpha: 0.8);
   }
 }
