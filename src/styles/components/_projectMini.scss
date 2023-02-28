@@ -4,7 +4,13 @@
   transition-property: border, color;
   // position and layout
   position: relative;
-  border: solid 0.5rem $colorPrimaryB;
+  @include media(">=tablet") {
+    border: solid 0.5rem $colorPrimaryB;
+  }
+  @include media("<tablet") {
+    border: solid 0.2rem $colorPrimaryB;
+  }
+
   border-color: $colorPrimaryB;
   // box-model
   @include media(">=LGtablet") {
@@ -26,7 +32,12 @@
     transition: 0.3s ease;
     transition-property: border, color;
     // box model
-    border: solid 0.5rem $colorSecondary;
+    @include media(">=tablet") {
+      border: solid 0.5rem $colorSecondary;
+    }
+    @include media("<tablet") {
+      border: solid 0.2rem $colorSecondary;
+    }
     // children
     h1 {
       color: $colorSecondary;

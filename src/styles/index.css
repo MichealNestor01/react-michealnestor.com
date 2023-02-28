@@ -733,10 +733,21 @@ ul {
   -webkit-transition-property: border, color;
   transition-property: border, color;
   position: relative;
-  border: solid 0.5rem #fafafa;
   border-color: #fafafa;
   cursor: pointer;
   color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  .projectMini {
+    border: solid 0.5rem #fafafa;
+  }
+}
+
+@media (max-width: 767px) {
+  .projectMini {
+    border: solid 0.2rem #fafafa;
+  }
 }
 
 @media (min-width: 1120px) {
@@ -762,7 +773,18 @@ ul {
   transition: 0.3s ease;
   -webkit-transition-property: border, color;
   transition-property: border, color;
-  border: solid 0.5rem #72e2ae;
+}
+
+@media (min-width: 768px) {
+  .projectMini:hover {
+    border: solid 0.5rem #72e2ae;
+  }
+}
+
+@media (max-width: 767px) {
+  .projectMini:hover {
+    border: solid 0.2rem #72e2ae;
+  }
 }
 
 .projectMini:hover h1 {
