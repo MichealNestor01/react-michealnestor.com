@@ -26,6 +26,7 @@
     }
     @include media("<LGtablet", ">=tablet") {
       margin-top: 10px;
+      width: 80%;
       @include flex(center, center, column);
     }
     @include media("<tablet") {
