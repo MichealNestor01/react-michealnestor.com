@@ -1,6 +1,5 @@
 // hooks
-import { useSelector } from "react-redux";
-import { React, Fragment, useEffect, useState } from "react";
+import { React, Fragment, useState } from "react";
 import { Helmet } from "react-helmet";
 
 // components
@@ -16,7 +15,6 @@ const AboutPage = () => {
   const skillsData = data.skillsData;
   const aboutData = data.paragraph;
   const achievementsData = data.achievements;
-  const screenWidth = useSelector((state) => state.ui.screenWidth);
   const [suffix, setSuffix] = useState("__desktop");
 
   // simple handler for when the user changes the filter

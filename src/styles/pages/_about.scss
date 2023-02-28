@@ -113,7 +113,8 @@
       // box model
       width: 100%;
       // children
-      .selectBox {
+
+      .selectBoxContainer {
         // position and layout
         @include media(">=LGtablet") {
           @include flex(space-between, center, row);
@@ -135,6 +136,7 @@
           color: $colorPrimaryB;
         }
       }
+
       .examWrapper {
         //styling
         @include flex(center, flex-start, row);

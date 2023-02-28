@@ -945,7 +945,7 @@ ul {
 
 @media (min-width: 769px) {
   .selectBox {
-    width: 25rem;
+    width: 17rem;
   }
 }
 
@@ -1318,30 +1318,57 @@ ul {
 
 .aboutPage .content .box3 {
   width: 100%;
-  /*
-      .selectBoxContainer {
-        // position and layout
-        @include media(">=LGtablet") {
-          @include flex(space-between, center, row);
-        }
-        @include media("<LGtablet") {
-          @include flex(center, center, row);
-        }
-        // box model
-        margin-bottom: 20px;
-        font-size: var(--fontSizeParagraph);
-        @include media("<LGtablet") {
-          p {
-            margin-right: 1rem;
-          }
-        }
+}
 
-        // children
-        .selectBoxTitle {
-          color: $colorPrimaryB;
-        }
-      }
-      */
+.aboutPage .content .box3 .selectBoxContainer {
+  margin-bottom: 20px;
+  font-size: var(--fontSizeParagraph);
+}
+
+@media (min-width: 1120px) {
+  .aboutPage .content .box3 .selectBoxContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 1119px) {
+  .aboutPage .content .box3 .selectBoxContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 1119px) {
+  .aboutPage .content .box3 .selectBoxContainer p {
+    margin-right: 1rem;
+  }
+}
+
+.aboutPage .content .box3 .selectBoxContainer .selectBoxTitle {
+  color: #fafafa;
 }
 
 .aboutPage .content .box3 .examWrapper {

@@ -1,5 +1,4 @@
 // hooks
-import { useSelector } from "react-redux";
 import { React, Fragment, useEffect, useState } from "react";
 
 // components
@@ -7,7 +6,6 @@ import SelectBox from "../components/SelectBox";
 
 const ExamResults = ({ results, suffix }) => {
   // hook setup
-  const screenWidth = useSelector((state) => state.ui.screenWidth);
   const [gradeTypes, setGradeTypes] = useState([]);
   const [showExam, setShowExam] = useState("A-Level");
 
@@ -44,9 +42,9 @@ const ExamResults = ({ results, suffix }) => {
 
   return (
     <Fragment>
-      <div className={`selectBox selectBox${suffix}`}>
+      <div className="selectBoxContainer">
         <p className="selectBoxTitle">Filter Results: </p>
-        <SelectBox options={gradeTypes} changeHandler={changeFilterHandler} screenWidth={screenWidth} />
+        <SelectBox options={gradeTypes} changeHandler={changeFilterHandler} />
       </div>
       <div className="examWrapper">
         <table className="examTable">
