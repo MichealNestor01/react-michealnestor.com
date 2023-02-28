@@ -65,7 +65,7 @@ const ProjectsPage = () => {
         </p>
         <div className="selectBox">
           <p className="selectBoxTitle">Filter Projects: </p>
-          <SelectBox options={options} changeHandler={changeFilterHandler} screenWidth={screenWidth} />
+          <SelectBox options={options} changeHandler={changeFilterHandler} />
         </div>
         <div className="minisContainer">{projectMinis}</div>
       </section>
