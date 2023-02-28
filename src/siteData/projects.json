@@ -7,9 +7,9 @@
     "description": "This project provides a docker image that contains a python program that allows you scrape screenshots and html data from any url including onion sites. This is uses a modified version of selenium for tor (tor-selenium) and makes use of a virtual frame buffer and modified tor config files to enable firefox to run through the terminal while still be able to capture video output.",
     "date_completed": "2022-09-01T12:00:00Z",
     "photo_main": "/images/portfolio/check.torproject.orgMain.png",
-    "photo_1": "https://michealnestor.com/media/photos/portfolio/tor-docker-scraper/nhmgdpnyoljh5uzr5kwlatx2u3diou4ldeommfxjz3wkhalzgjqx_Ajb4a1U.png",
-    "photo_2": "https://michealnestor.com/media/photos/portfolio/tor-docker-scraper/Screenshot_from_2022-10-07_22-28-58.png",
-    "photo_3": "https://michealnestor.com/media/photos/portfolio/tor-docker-scraper/Screenshot_from_2022-10-07_22-29-51.png"
+    "photo_1": null,
+    "photo_2": null,
+    "photo_3": null
   },
   "gtopo30-utilities": {
     "slug": "gtopo30-utilities",

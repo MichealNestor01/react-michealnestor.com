@@ -1,7 +1,7 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 // development = http://localhost:3000/; deployment = https://www.michealnestor.com;
-export const domainName = "http://localhost:3000/";
+export const domainName = "https://www.michealnestor.com/";
 
 /*--------------------------------------------------------------------------*/
 /*-----------------------UI SLICE-------------------------------------------*/
