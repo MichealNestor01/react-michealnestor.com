@@ -1,5 +1,5 @@
 import { React, useState, Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import useInput from "../hooks/useInput";
 import { uiActions } from "../store";
@@ -11,13 +11,6 @@ const ContactPage = () => {
   const dispatch = useDispatch();
   const [error, setError] = useState({ error: false, message: "" });
   const [message, setMessage] = useState("");
-  const screenWidth = useSelector((state) => state.ui.screenWidth);
-
-  // code for dealing with size changes
-  let suffix = "__desktop";
-  if (screenWidth < 1250) {
-    suffix = "__mobile";
-  }
 
   // setup custom use input objects. Basically a object for test inputs
   const {
@@ -100,11 +93,9 @@ const ContactPage = () => {
   };
 
   // setup the classes for the inputs
-  const emailClasses = emailHasError ? `input input${suffix} input__invalid` : `input input${suffix}`;
-  const nameClasses = nameHasError ? `input input${suffix} input__invalid` : `input input${suffix}`;
-  const subjectClasses = subjectHasError
-    ? `input input${suffix} input__invalid`
-    : `input input${suffix}`;
+  const emailClasses = emailHasError ? `input  input__invalid` : `input`;
+  const nameClasses = nameHasError ? `input  input__invalid` : `input`;
+  const subjectClasses = subjectHasError ? `input input__invalid` : `input`;
 
   let buttonVariants = {
     tap: { scale: 0.9 },
@@ -182,21 +173,21 @@ const ContactPage = () => {
         name: "message",
         placeholder: "Please give me some details regarding how I can help you!",
         value: message,
-        class: `input input${suffix}`,
+        class: `input`,
         onChange: (e) => setMessage(e.target.value),
       },
     },
   ].map((section) => {
     let htmlFor;
-    if (section.inputType == "input") {
+    if (section.inputType === "input") {
       htmlFor = section.input.name;
     } else {
       htmlFor = section.textArea.name;
     }
     return (
       <section className="section">
-        <section className={`labelInputWrapper labelInputWrapper${suffix}`}>
-          <label className={`label label${suffix}`} htmlFor={htmlFor}>
+        <section className="labelInputWrapper">
+          <label className="label" htmlFor={htmlFor}>
             {section.label}
           </label>
           {section.inputType === "input" ? (
@@ -241,7 +232,7 @@ const ContactPage = () => {
       <section className="contactPage">
         <h1 className="title">Contact Me!</h1>
         {error.error && <h1 className="errorMessage">{error.message}</h1>}
-        <form className={`form form${suffix}`} method="POST" data-netlify="true">
+        <form className="form" method="POST" data-netlify="true">
           {formSections}
           <section className="section">
             <motion.button
@@ -249,7 +240,7 @@ const ContactPage = () => {
               whileTap="tap"
               whileHover="hover"
               type="submit"
-              className={`button button${suffix}`}
+              className="button"
               disabled={!formIsValid}
             >
               Send Message!
