@@ -63,7 +63,7 @@ const ProjectsPage = () => {
           This is a short list of some of the projects I have worked on, click on a project to find out
           more!
         </p>
-        <div className="selectBox">
+        <div className="selectBoxContainer">
           <p className="selectBoxTitle">Filter Projects: </p>
           <SelectBox options={options} changeHandler={changeFilterHandler} />
         </div>

@@ -32,7 +32,7 @@
     color: $colorPrimaryB;
     text-align: justify;
   }
-  .selectBox {
+  .selectBoxContainer {
     // position and layout
     @include media(">=tablet") {
       @include flex(flex-start, center, row);
