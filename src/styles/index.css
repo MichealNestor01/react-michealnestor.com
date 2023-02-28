@@ -27,7 +27,7 @@
     --fontSizeHeading: 3rem;
     --fontSizeLargeParagraph: 5rem;
     --fontSizeMediumParagraph: 4rem;
-    --fontSizeParagraph: 1.75rem;
+    --fontSizeParagraph: 3.5rem;
     --landingTopMargin: 150px;
   }
 }
@@ -36,10 +36,10 @@
   :root {
     --fontSizeLargeHeading: 7.5rem;
     --fontSizeMediumHeading: 6rem;
-    --fontSizeHeading: 3rem;
+    --fontSizeHeading: 3.5rem;
     --fontSizeLargeParagraph: 3.5rem;
     --fontSizeMediumParagraph: 3rem;
-    --fontSizeParagraph: 1.75rem;
+    --fontSizeParagraph: 2.5rem;
     --landingTopMargin: 120px;
   }
 }
@@ -50,8 +50,8 @@
     --fontSizeMediumHeading: 5rem;
     --fontSizeHeading: 3rem;
     --fontSizeLargeParagraph: 3rem;
-    --fontSizeMediumParagraph: 3rem;
-    --fontSizeParagraph: 1.75rem;
+    --fontSizeMediumParagraph: 2rem;
+    --fontSizeParagraph: 1.6rem;
     --landingTopMargin: 120px;
   }
 }
@@ -62,8 +62,8 @@
     --fontSizeMediumHeading: 4.5rem;
     --fontSizeHeading: 3rem;
     --fontSizeLargeParagraph: 2.5rem;
-    --fontSizeMediumParagraph: 2.5rem;
-    --fontSizeParagraph: 1.75rem;
+    --fontSizeMediumParagraph: 1.8rem;
+    --fontSizeParagraph: 1.5rem;
     --landingTopMargin: 80px;
   }
 }
@@ -102,7 +102,7 @@
     --fontSizeMediumHeading: 2.3rem;
     --fontSizeHeading: 2rem;
     --fontSizeLargeParagraph: 1.5rem;
-    --fontSizeMediumParagraph: 2rem;
+    --fontSizeMediumParagraph: 1.5rem;
     --fontSizeParagraph: 1.25rem;
     --landingTopMargin: 0px;
     --burgerBarWidth: 30px;
@@ -116,7 +116,7 @@
     --fontSizeMediumHeading: 1.6rem;
     --fontSizeHeading: 1.6rem;
     --fontSizeLargeParagraph: 1.5rem;
-    --fontSizeMediumParagraph: 2rem;
+    --fontSizeMediumParagraph: 1.4rem;
     --fontSizeParagraph: 1.2rem;
     --landingTopMargin: 0px;
     --burgerBarWidth: 20px;
@@ -1079,7 +1079,7 @@ ul {
 }
 
 .aboutPage .content {
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 @media (min-width: 1120px) {
@@ -1240,12 +1240,29 @@ ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style-type: square;
-  font-size: 1.75rem;
+  font-size: var(--fontSizeParagraph);
 }
 
 .aboutPage .content .box2 .skillsContainer li {
-  margin-left: 30px;
-  width: 10rem;
+  margin-left: 40px;
+}
+
+@media (min-width: 768px) {
+  .aboutPage .content .box2 .skillsContainer li {
+    width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutPage .content .box2 .skillsContainer li {
+    width: 140px;
+  }
+}
+
+@media (max-width: 359px) {
+  .aboutPage .content .box2 .skillsContainer li {
+    width: 110px;
+  }
 }
 
 .aboutPage .content .box3 {
@@ -1345,11 +1362,11 @@ ul {
 
 .aboutPage .content .box4 .achievementTitle {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: var(--fontSizeMediumParagraph);
 }
 
 .aboutPage .content .box4 .achievementDesc {
-  font-size: 1.5rem;
+  font-size: var(--fontSizeParagraph);
 }
 
 /*
