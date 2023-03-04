@@ -1,3 +1,4 @@
+// hooks
 import { React, useReducer, useEffect, useState } from "react";
 
 const initalState = {
@@ -26,6 +27,7 @@ const reducer = (state, action) => {
 };
 
 const PhotoGallery = ({ photos }) => {
+  // setup hooks
   const [imageState, dispatch] = useReducer(reducer, initalState);
   const [indicatorDivs, setIndicatorDivs] = useState();
 
@@ -57,15 +59,17 @@ const PhotoGallery = ({ photos }) => {
   return (
     <section className="gallery">
       <div className="imageContainer">{currentImage}</div>
-      <div className="controls">
-        <button className="button" onClick={() => dispatch({ type: "decrement", totalImages })}>
-          {"<"}
-        </button>
-        <div className="indicators">{indicatorDivs}</div>
-        <button className="button" onClick={() => dispatch({ type: "increment", totalImages })}>
-          {">"}
-        </button>
-      </div>
+      {totalImages > 1 && (
+        <div className="controls">
+          <button className="button" onClick={() => dispatch({ type: "decrement", totalImages })}>
+            <p>{"<"}</p>
+          </button>
+          <div className="indicators">{indicatorDivs}</div>
+          <button className="button" onClick={() => dispatch({ type: "increment", totalImages })}>
+            <p>{">"}</p>
+          </button>
+        </div>
+      )}
     </section>
   );
 };

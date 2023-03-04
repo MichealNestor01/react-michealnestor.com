@@ -889,20 +889,16 @@ ul {
       -ms-flex-direction: row;
           flex-direction: row;
   overflow-y: scroll;
-  border-bottom: none;
-  height: 500px;
+  max-height: 500px;
   width: 100%;
 }
 
 .gallery .imageContainer .image {
   border-radius: 1rem;
   max-width: 100%;
-  max-height: 95%;
 }
 
 .gallery .controls {
-  width: 100%;
-  margin-top: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -916,30 +912,32 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 .gallery .controls .button {
-  background-color: transparent;
-  border: solid 0.25rem #72e2ae;
-  color: #72e2ae;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   width: 3rem;
   height: 3rem;
-  font-weight: 700;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  border: solid 0.25rem #72e2ae;
+  background-color: transparent;
   cursor: pointer;
+}
+
+.gallery .controls .button:hover {
+  background-color: #fafafa;
+}
+
+.gallery .controls .button p {
+  position: absolute;
+  -webkit-transform: translate(70%, -55%);
+          transform: translate(70%, -55%);
+  color: #72e2ae;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .gallery .controls .indicators {
