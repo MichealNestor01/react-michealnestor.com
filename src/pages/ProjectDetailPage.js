@@ -1,13 +1,20 @@
+// hooks
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
-import { React, Fragment } from "react";
+import { React } from "react";
 import { motion } from "framer-motion";
-import PhotoGallery from "../components/PhotoGallery";
-import { dateConverter } from "../functions/dateConverter";
 import { Helmet } from "react-helmet";
-import { domainName } from "../store/index";
 import { useNavigate } from "react-router";
 
+// components
+import PhotoGallery from "../components/PhotoGallery";
+import { Fragment } from "react";
+
+// functions
+import { dateConverter } from "../functions/dateConverter";
+
+// site data
+import { domainName } from "../store/index";
 import projects from "../siteData/projects.json";
 
 const ProjectDetailPage = () => {
@@ -25,11 +32,6 @@ const ProjectDetailPage = () => {
     photo_2,
     photo_3,
   } = projects[`${slug}`];
-
-  let suffix = "__desktop";
-  if (screenWidth < 1600) {
-    suffix = "__mobile";
-  }
 
   let buttonVariants = {
     tap: { scale: 0.9 },
@@ -56,20 +58,20 @@ const ProjectDetailPage = () => {
         <title>Micheal Nestor | {`${title}`}</title>
         <meta name="description" content={`Click to read about Micheal Nestor's ${title} project.`} />
       </Helmet>
-      <section className={`projectDetailPage projectDetailPage${suffix}`}>
-        <section className={`header header${suffix}`}>
-          <h1 className={`title title${suffix}`}>{title}</h1>
-          <section className={`details detailsr${suffix}`}>
-            <h2 className={`detail detail${suffix}`}>Completed: {dateString}</h2>
-            <h2 className={`detail detail${suffix}`}>Project Type: {project_type}</h2>
+      <section className="projectDetailPage">
+        <section className="header">
+          <h1 className="title">{title}</h1>
+          <section className="details">
+            <h2 className="detail">Completed: {dateString}</h2>
+            <h2 className="detail">Project Type: {project_type}</h2>
           </section>
         </section>
-        <section className={`main main${suffix}`}>
-          <section className={`galleryContainer galleryContainer${suffix}`}>
+        <section className="main">
+          <section className="galleryContainer">
             <PhotoGallery photos={photosList} />
           </section>
-          <section className={`descriptionContainer descriptionContainer${suffix}`}>
-            <p className={`description description${suffix}`}>{description}</p>
+          <section className="descriptionContainer">
+            <p className="description">{description}</p>
             <section className="buttons">
               {project_type === "Javascript" && screenWidth > 1600 && (
                 <motion.a
@@ -105,7 +107,7 @@ const ProjectDetailPage = () => {
           onClick={() => navigate(`/portfolio`)}
           className="backButton globalButton"
         >
-          ⮜ Other Projects ⮜
+          Other Projects
         </motion.div>
       </section>
     </Fragment>

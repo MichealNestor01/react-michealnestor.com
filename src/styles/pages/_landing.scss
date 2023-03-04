@@ -29,7 +29,7 @@
     // children
     .content {
       // position and layout
-      @include media(">LGtablet") {
+      @include media(">=LGtablet") {
         @include flex(flex-start, flex-start, column);
       }
       @include media("<tablet") {

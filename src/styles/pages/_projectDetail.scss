@@ -1,99 +1,97 @@
 .projectDetailPage {
-  // styling
-  width: 100%;
+  // position and layout
   @include flex(flex-start, center, column);
+  // clipping
   overflow-y: scroll;
-
+  // box model
+  width: 100%;
   // children
   .backButton {
+    // box model
     margin: 20px 0px;
   }
   .header {
-    // styling
-    &__desktop {
-      margin: 40px 0px 20px 0px;
+    // position and layout
+    @include media(">=LGtablet") {
       @include flex(space-between, center, row);
     }
-    &__mobile {
-      width: 98%;
+    @include media("<LGtablet") {
       @include flex(center, center, column);
     }
-
+    // box model
+    @include media(">=tablet") {
+      margin: 40px 0px 20px 0px;
+    }
+    @include media("<tablet") {
+      width: 98%;
+    }
     // children
     .title {
-      color: $colorPrimaryB;
-      &__desktop {
-        font-size: 4rem;
-      }
-      &__mobile {
+      // position and layout
+      @include media("<tablet") {
         @include flex(center, center, row);
+      }
+      // box model
+      @include media("<tablet") {
         width: 100%;
-        font-size: 2rem;
+      }
+      // typography
+      color: $colorPrimaryB;
+      font-size: var(--fontSizeHeading);
+      @include media("<tablet") {
         text-align: center;
       }
     }
     .details {
-      // stying
+      // position and layout
       @include flex(center, center, column);
+      // typography
       color: $colorPrimaryB;
-      font-size: 1.3rem;
-      &__desktop {
-        width: 40%;
+      font-size: var(--fontSizeSmallParagraph);
+      @include media("<LGtablet") {
+        text-align: center;
       }
-      &__mobile {
-        width: 100%;
-      }
-
       // children
       .detail {
+        // box model
         width: 100%;
-        &__desktop {
-          text-align: right;
-        }
-        &__mobile {
-          text-align: center;
-        }
       }
     }
   }
   .main {
-    // styling
-    &__desktop {
-      width: 80%;
+    // position and layout
+    @include media(">=tablet") {
       display: grid;
+      gap: 1%;
       grid-template-columns: 3fr 2fr;
     }
-    &__mobile {
-      width: 98%;
+    @include media("<tablet") {
       @include flex(center, center, column);
     }
-
+    // box model
+    @include media(">=tablet") {
+      width: 80%;
+    }
+    @include media("<tablet") {
+      width: 98%;
+    }
     // children
     .descriptionContainer {
-      // styling
+      // position and layout
       @include flex(flex-start, center, column);
-
       // children
       .description {
+        // typography
         color: $colorPrimaryB;
         text-align: justify;
-        &__desktop {
-          font-size: 1.8rem;
-        }
-        &__mobile {
-          font-size: 1.5rem;
-        }
+        font-size: var(--fontSizeMediumParagraph);
       }
       .buttons {
-        // styling
+        // poisition and layout
+        @include flex(space-evenly, center, row);
+        // box model
         margin-top: 15px;
         width: 100%;
-        @include flex(space-evenly, center, row);
-
-        // children
-        .button {
-          padding: 10px 25px;
-        }
       }
     }
   }
