@@ -221,36 +221,6 @@ ul {
   width: 100%;
 }
 
-@media (min-width: 1366px) {
-  body {
-    background-color: #ff5e5e;
-  }
-}
-
-@media (min-width: 1120px) and (max-width: 1365px) {
-  body {
-    background-color: #ffbc5e;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1119px) {
-  body {
-    background-color: #c1ff5e;
-  }
-}
-
-@media (min-width: 360px) and (max-width: 767px) {
-  body {
-    background-color: #5effbc;
-  }
-}
-
-@media (max-width: 359px) {
-  body {
-    background-color: #5e84ff;
-  }
-}
-
 .header {
   position: relative;
   z-index: 1;
