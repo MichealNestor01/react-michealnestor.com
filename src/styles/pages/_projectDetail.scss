@@ -63,7 +63,7 @@
     @include media(">=tablet") {
       display: grid;
       gap: 1%;
-      grid-template-columns: 3fr 2fr;
+      grid-template-columns: 5fr 4fr;
     }
     @include media("<tablet") {
       @include flex(center, center, column);
@@ -92,6 +92,12 @@
         // box model
         margin-top: 15px;
         width: 100%;
+        // children
+        .runProjectButton {
+          @include media("<desktop") {
+            display: none;
+          }
+        }
       }
     }
   }

@@ -20,7 +20,6 @@ import projects from "../siteData/projects.json";
 const ProjectDetailPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const screenWidth = useSelector((state) => state.ui.screenWidth);
   const {
     project_type,
     title,
@@ -73,14 +72,14 @@ const ProjectDetailPage = () => {
           <section className="descriptionContainer">
             <p className="description">{description}</p>
             <section className="buttons">
-              {project_type === "Javascript" && screenWidth > 1600 && (
+              {project_type === "Javascript" && (
                 <motion.a
                   variants={buttonVariants}
                   whileTap="tap"
                   whileHover="hover"
                   href={`${domainName}projects/${slug}`}
                   target="_blank"
-                  className="button globalButton"
+                  className="button globalButton runProjectButton"
                 >
                   Run Project
                 </motion.a>

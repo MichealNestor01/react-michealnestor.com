@@ -2211,8 +2211,8 @@ ul {
     display: -ms-grid;
     display: grid;
     gap: 1%;
-    -ms-grid-columns: 3fr 2fr;
-        grid-template-columns: 3fr 2fr;
+    -ms-grid-columns: 5fr 4fr;
+        grid-template-columns: 5fr 4fr;
   }
 }
 
@@ -2284,6 +2284,12 @@ ul {
           flex-direction: row;
   margin-top: 15px;
   width: 100%;
+}
+
+@media (max-width: 1365px) {
+  .projectDetailPage .main .descriptionContainer .buttons .runProjectButton {
+    display: none;
+  }
 }
 
 .contactPage {
