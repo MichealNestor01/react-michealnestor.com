@@ -1,101 +1,105 @@
 .projectDetailPage {
-  // position and layout
-  @include flex(flex-start, center, column);
   // clipping
   overflow-y: scroll;
   // box model
   width: 100%;
+  height: 95vh;
   // children
-  .backButton {
-    // box model
-    margin: 20px 0px;
-  }
-  .header {
+  wrapper {
     // position and layout
-    @include media(">=LGtablet") {
-      @include flex(space-between, center, row);
+    @include flex(flex-start, center, column);
+    margin-bottom: 60px;
+    .backButton {
+      // box model
+      margin: 20px 0px;
     }
-    @include media("<LGtablet") {
-      @include flex(center, center, column);
-    }
-    // box model
-    @include media(">=tablet") {
-      margin: 40px 0px 20px 0px;
-    }
-    @include media("<tablet") {
-      width: 98%;
-    }
-    // children
-    .title {
+    .header {
       // position and layout
-      @include media("<tablet") {
-        @include flex(center, center, row);
+      @include media(">=LGtablet") {
+        @include flex(space-between, center, row);
+      }
+      @include media("<LGtablet") {
+        @include flex(center, center, column);
       }
       // box model
-      @include media("<tablet") {
-        width: 100%;
+      @include media(">=tablet") {
+        margin: 40px 0px 20px 0px;
       }
-      // typography
-      color: $colorPrimaryB;
-      font-size: var(--fontSizeHeading);
       @include media("<tablet") {
-        text-align: center;
-      }
-    }
-    .details {
-      // position and layout
-      @include flex(center, center, column);
-      // typography
-      color: $colorPrimaryB;
-      font-size: var(--fontSizeSmallParagraph);
-      @include media("<LGtablet") {
-        text-align: center;
+        width: 98%;
       }
       // children
-      .detail {
+      .title {
+        // position and layout
+        @include media("<tablet") {
+          @include flex(center, center, row);
+        }
         // box model
-        width: 100%;
-      }
-    }
-  }
-  .main {
-    // position and layout
-    @include media(">=tablet") {
-      display: grid;
-      gap: 1%;
-      grid-template-columns: 5fr 4fr;
-    }
-    @include media("<tablet") {
-      @include flex(center, center, column);
-    }
-    // box model
-    @include media(">=tablet") {
-      width: 80%;
-    }
-    @include media("<tablet") {
-      width: 98%;
-    }
-    // children
-    .descriptionContainer {
-      // position and layout
-      @include flex(flex-start, center, column);
-      // children
-      .description {
+        @include media("<tablet") {
+          width: 100%;
+        }
         // typography
         color: $colorPrimaryB;
-        text-align: justify;
-        font-size: var(--fontSizeMediumParagraph);
+        font-size: var(--fontSizeHeading);
+        @include media("<tablet") {
+          text-align: center;
+        }
       }
-      .buttons {
-        // poisition and layout
-        @include flex(space-evenly, center, row);
-        // box model
-        margin-top: 15px;
-        width: 100%;
+      .details {
+        // position and layout
+        @include flex(center, center, column);
+        // typography
+        color: $colorPrimaryB;
+        font-size: var(--fontSizeSmallParagraph);
+        @include media("<LGtablet") {
+          text-align: center;
+        }
         // children
-        .runProjectButton {
-          @include media("<desktop") {
-            display: none;
+        .detail {
+          // box model
+          width: 100%;
+        }
+      }
+    }
+    .main {
+      // position and layout
+      @include media(">=tablet") {
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 5fr 4fr;
+      }
+      @include media("<tablet") {
+        @include flex(center, center, column);
+      }
+      // box model
+      @include media(">=tablet") {
+        width: 80%;
+      }
+      @include media("<tablet") {
+        width: 98%;
+      }
+      // children
+      .descriptionContainer {
+        // position and layout
+        @include flex(flex-start, center, column);
+        // children
+        .description {
+          // typography
+          color: $colorPrimaryB;
+          text-align: justify;
+          font-size: var(--fontSizeMediumParagraph);
+        }
+        .buttons {
+          // poisition and layout
+          @include flex(space-evenly, center, row);
+          // box model
+          margin-top: 15px;
+          width: 100%;
+          // children
+          .runProjectButton {
+            @include media("<desktop") {
+              display: none;
+            }
           }
         }
       }
