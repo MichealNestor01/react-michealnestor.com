@@ -11,7 +11,7 @@ const NotFound = () => {
     { text: "Home", path: "/" },
     { text: "About Me", path: "/about" },
     { text: "My Portfolio", path: "/portfolio" },
-    { text: "Contact Me", path: "/contact" },
+    //{ text: "Contact Me", path: "/contact" },
   ].map((link) => {
     return (
       <motion.button

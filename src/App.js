@@ -55,7 +55,7 @@ function App() {
     { path: "about", key: "about", component: <AboutPage />, exact: true },
     { path: "portfolio", key: "portfolio", component: <PortfolioPage />, exact: true },
     { path: "portfolio/:slug", key: "projectDetail", component: <ProjectDetailPage />, exact: true },
-    { path: "contact", key: "contact", component: <ContactPage />, exact: true },
+    //{ path: "contact", key: "contact", component: <ContactPage />, exact: true },
     { path: "*", key: "notFound", component: <NotFound /> },
   ];
 

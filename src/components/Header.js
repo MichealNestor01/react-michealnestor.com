@@ -6,14 +6,13 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   // setup hooks
-  const screenWidth = useSelector((state) => state.ui.screenWidth);
   const [openLinks, setOpenLinks] = useState(false);
 
   // setup the navigation links
   const linkInfo = [
     { title: "About", page: "/about" },
     { title: "Portfolio", page: "/portfolio" },
-    { title: "Contact", page: "/contact" },
+    //{ title: "Contact", page: "/contact" },
   ];
 
   // create the nav link components
