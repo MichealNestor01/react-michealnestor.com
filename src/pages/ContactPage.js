@@ -232,7 +232,7 @@ const ContactPage = () => {
       <section className="contactPage">
         <h1 className="title">Contact Me!</h1>
         {error.error && <h1 className="errorMessage">{error.message}</h1>}
-        <form className="form" method="POST" data-netlify="true">
+        <form className="form" netlify>
           {formSections}
           <section className="section">
             <motion.button
