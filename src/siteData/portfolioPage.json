@@ -1,6 +1,12 @@
 {
   "projectMinis": [
     {
+      "slug": "jack-compiler",
+      "project_type": "C",
+      "title": "Jack Compiler",
+      "photo_main": "/images/portfolio/compilerDiagram.png"
+    },
+    {
       "slug": "tor-docker-scraper",
       "project_type": "Python",
       "title": "Tor Docker Scraper",

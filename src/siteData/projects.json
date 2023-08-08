@@ -1,4 +1,16 @@
 {
+  "jack-compiler": {
+    "slug": "jack-compiler",
+    "source_code": "https://github.com/MichealNestor01/jack-compiler",
+    "project_type": "C",
+    "title": "Jack Compiler",
+    "description": "This is a compiler that translates the Jack language into Jack VM code using a recursive descent parser. These are the languages that were created for the nand2tetris course. This was the primary assessed piece of work for COMP2932 Compiler Design and Construction. The code was tested using testscripts provided by Dr Mhd. A. Alsalka as they are not mine they are not included in this repository, but this compiler did recieve 100% of the available marks.",
+    "date_completed": "2023-06-12T12:00:00Z",
+    "photo_main": "/images/portfolio/compilerDiagram.png",
+    "photo_1": null,
+    "photo_2": null,
+    "photo_3": null
+  },
   "tor-docker-scraper": {
     "slug": "tor-docker-scraper",
     "source_code": "https://github.com/MichealNestor01/tor-scraper-docker",
