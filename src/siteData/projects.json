@@ -1,4 +1,16 @@
 {
+  "russian-word-profiler": {
+    "slug": "russian-word-profiler",
+    "source_code": "https://github.com/MichealNestor01/RussianWordProfiler/",
+    "project_type": "react.js/flask",
+    "title": "Russian Word Profiler",
+    "description": "Joint research project with the Russian and Slavonic Studies Department at the University of Leeds. It is a linguistics research tool, and education tool which aims to emulate the feature set of the AntWordProfiler, (Dr Laurence Anthony), except through a web based interface and designed for Russian. This project's point of contact with the department was Dr. Pavel Gudoshnikov and it was developed in collaboration Ben Thirkill who lead desgin and UX",
+    "date_completed": "2023-08-08T12:00:00Z",
+    "photo_main": "/images/portfolio/profilermain.png",
+    "photo_1": "/images/portfolio/profiler2.png",
+    "photo_2": "/images/portfolio/profiler3.png",
+    "photo_3": "/images/portfolio/profiler1.png"
+  },
   "jack-compiler": {
     "slug": "jack-compiler",
     "source_code": "https://github.com/MichealNestor01/jack-compiler",

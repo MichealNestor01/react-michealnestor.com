@@ -1,6 +1,12 @@
 {
   "projectMinis": [
     {
+      "slug": "russian-word-profiler",
+      "project_type": "react.js/flask",
+      "title": "Russian Word Profiler",
+      "photo_main": "/images/portfolio/profilermain.png"
+    },
+    {
       "slug": "jack-compiler",
       "project_type": "C",
       "title": "Jack Compiler",
