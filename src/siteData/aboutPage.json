@@ -36,7 +36,18 @@
     { "exam_type": "BSc Year One", "title": "Professional Computing", "grade": "1:1" },
     { "exam_type": "BSc Year One", "title": "Beginners Russian 1", "grade": "1:1" },
     { "exam_type": "BSc Year One", "title": "Beginners Russian 2", "grade": "1:1" },
-    { "exam_type": "BSc Year One", "title": "Databases", "grade": "2:1" }
+    { "exam_type": "BSc Year One", "title": "Databases", "grade": "2:1" },
+    { "exam_type": "BSc Year Two", "title": "Operating Systems", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "Networks", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "Formal Languages & Finite Automata", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "Numerical Computation", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "User Interfaces", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "Software Engineering Principles", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "Compiler Design and Consruction", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "Algorithms 1", "grade": "1:1" },
+    { "exam_type": "BSc Year Two", "title": "Algorithms 2", "grade": "2:1" },
+    { "exam_type": "BSc Year Two", "title": "Data Mining", "grade": "2:1" },
+    { "exam_type": "BSc Year Two", "title": "Software Engineering Project", "grade": "2:1" }
   ],
   "achievements": [
     {
